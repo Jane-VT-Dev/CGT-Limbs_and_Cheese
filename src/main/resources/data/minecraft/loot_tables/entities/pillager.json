@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:zombie_head",
+          "name": "cgt_mod:pillager_head",
           "weight": 10,
           "functions": [
             {
