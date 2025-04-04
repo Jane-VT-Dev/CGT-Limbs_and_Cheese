@@ -14,11 +14,11 @@
   "item.cgt_mod.villager_torso": "Villager Torso",
   "item.cgt_mod.zombie_torso": "Zombie Torso",
 
-  "item.cgt_mod.player_arm": "Player Torso",
-  "item.cgt_mod.pillager_arm": "Pillager Torso",
-  "item.cgt_mod.skeleton_arm": "Skeleton Torso",
-  "item.cgt_mod.villager_arm": "Villager Torso",
-  "item.cgt_mod.zombie_arm": "Zombie Torso",
+  "item.cgt_mod.player_arm": "Player Arm",
+  "item.cgt_mod.pillager_arm": "Pillager Arm",
+  "item.cgt_mod.skeleton_arm": "Skeleton Arm",
+  "item.cgt_mod.villager_arm": "Villager Arm",
+  "item.cgt_mod.zombie_arm": "Zombie Arm",
 
   "item.cgt_mod.player_leg": "Player Leg",
   "item.cgt_mod.pillager_leg": "Pillager Leg",

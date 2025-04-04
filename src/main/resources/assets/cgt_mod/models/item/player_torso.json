@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cgt_mod:items/zombie_head_on_stick"
+    "layer0": "cgt_mod:items/player_torso"
   }
 }

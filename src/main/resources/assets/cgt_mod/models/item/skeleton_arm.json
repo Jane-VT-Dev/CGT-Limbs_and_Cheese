@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cgt_mod:items/skeleton"
+    "layer0": "cgt_mod:items/skeleton_arm"
   }
 }
