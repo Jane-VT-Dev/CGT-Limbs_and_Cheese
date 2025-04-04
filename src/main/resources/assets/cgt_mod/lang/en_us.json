@@ -1,6 +1,9 @@
 {
+  "itemGroup.cgt_tab": "CGT TAB",
+
   "item.cgt_mod.effigy": "Effigy",
   "item.cgt_mod.wedding_ring": "Wedding Ring",
+  "item.cgt_mod.guts": "Guts",
 
   "item.cgt_mod.pillager_head_on_stick": "Pillager Head on a Stick",
   "item.cgt_mod.player_head_on_stick": "Player Head on a Stick",
@@ -31,12 +34,22 @@
 
   "item.cgt_mod.emmental": "Emmental",
   "item.cgt_mod.camembert": "Camembert",
-  "item.cgt_mod.fromage_de_chevre": "Fromage  de Chevre",
+  "item.cgt_mod.fromage_de_chevre": "Fromage de Chevre",
   "item.cgt_mod.epoisses": "Epoisses",
-  "item.cgt_mod.tomme_de_jura": "Tomme de Jura",
+  "item.cgt_mod.tomme_du_jura": "Tomme du Jura",
   "item.cgt_mod.comte": "Comte",
   "item.cgt_mod.morbier": "Morbier",
   "item.cgt_mod.raclette": "Raclette",
-  "item.cgt_mod.bria_savatin": "Bria savatin",
-  "item.cgt_mod.casu_marzu": "Casu Marzu"
+  "item.cgt_mod.bria_savarin": "Bria savarin",
+  "item.cgt_mod.casu_marzu": "Casu Marzu",
+  "item.cgt_mod.cheddar": "Cheddar",
+  "item.cgt_mod.raclette_plate": "Raclette Plate",
+
+  "item.cgt_mod.basket": "Basket",
+  "item.cgt_mod.milk_basket": "Milk Basket",
+  "item.cgt_mod.sheep_milk_basket": "Sheep Milk Basket",
+  "item.cgt_mod.sheep_milk_bowl": "Sheep Milk Bowl",
+
+
+  "item.cgt_mod.sheep_milk_bucket": "Sheep Milk Bucket"
 }

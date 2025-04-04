@@ -4,6 +4,7 @@ import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.ModCreativeTab;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.MilkBucketItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -159,7 +160,7 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> TOMME_DU_JURA = ITEMS.register("tomme_de_jura",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TOMME_DU_JURA = ITEMS.register("tomme_du_jura",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
                     .build())
@@ -187,7 +188,7 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> BRIA_SAVARIN = ITEMS.register("bria_savatin",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> BRIA_SAVARIN = ITEMS.register("bria_savarin",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
                     .build())
@@ -197,6 +198,57 @@ public class ModItems {
     public static final RegistryObject<Item> CASU_MARZU = ITEMS.register("casu_marzu",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> CHEDDAR = ITEMS.register("cheddar",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> GUTS = ITEMS.register("guts",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> RACLETTE_PLATE = ITEMS.register("raclette_plate",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> SHEEP_MILK_BUCKET = ITEMS.register("sheep_milk_bucket",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> BASKET = ITEMS.register("basket",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> MILK_BASKET = ITEMS.register("milk_basket",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> SHEEP_MILK_BOWL = ITEMS.register("sheep_milk_bowl",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> SHEEP_MILK_BASKET = ITEMS.register("sheep_milk_basket",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
                     .build())
             .tab(ModCreativeTab.instance)
     ));
