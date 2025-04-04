@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "cgt_mod:items/fromage_de_chevre"
+    "layer0": "cgt_mod:items/raclette_plate"
   }
 }
