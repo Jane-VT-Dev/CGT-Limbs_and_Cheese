@@ -1,0 +1,39 @@
+{
+  "item.cgt_mod.effigy": "Effigy",
+  "item.cgt_mod.wedding_ring": "Wedding Ring",
+
+  "item.cgt_mod.pillager_head_on_stick": "Pillager Head on a Stick",
+  "item.cgt_mod.player_head_on_stick": "Player Head on a Stick",
+  "item.cgt_mod.skeleton_head_on_stick": "Skeleton Head on a Stick",
+  "item.cgt_mod.villager_head_on_stick": "Villager Head on a Stick",
+  "item.cgt_mod.zombie_head_on_stick": "Zombie Head on a Stick",
+
+  "item.cgt_mod.player_torso": "Player Torso",
+  "item.cgt_mod.pillager_torso": "Pillager Torso",
+  "item.cgt_mod.skeleton_torso": "Skeleton Torso",
+  "item.cgt_mod.villager_torso": "Villager Torso",
+  "item.cgt_mod.zombie_torso": "Zombie Torso",
+
+  "item.cgt_mod.player_arm": "Player Torso",
+  "item.cgt_mod.pillager_arm": "Pillager Torso",
+  "item.cgt_mod.skeleton_arm": "Skeleton Torso",
+  "item.cgt_mod.villager_arm": "Villager Torso",
+  "item.cgt_mod.zombie_arm": "Zombie Torso",
+
+  "item.cgt_mod.player_leg": "Player Leg",
+  "item.cgt_mod.pillager_leg": "Pillager Leg",
+  "item.cgt_mod.skeleton_leg": "Skeleton Leg",
+  "item.cgt_mod.villager_leg": "Villager Leg",
+  "item.cgt_mod.zombie_leg": "Zombie Leg",
+
+  "item.cgt_mod.emmental": "Emmental",
+  "item.cgt_mod.camembert": "Camembert",
+  "item.cgt_mod.fromage_de_chevre": "Fromage  de Chevre",
+  "item.cgt_mod.epoisses": "Epoisses",
+  "item.cgt_mod.tomme_de_jura": "Tomme de Jura",
+  "item.cgt_mod.comte": "Comte",
+  "item.cgt_mod.morbier": "Morbier",
+  "item.cgt_mod.raclette": "Raclette",
+  "item.cgt_mod.bria_savatin": "Bria savatin",
+  "item.cgt_mod.casu_marzu": "Casu Marzu"
+}
