@@ -5,6 +5,7 @@ import com.June.cgt_mod.ModCreativeTab;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MilkBucketItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,8 +16,9 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cgt_mod.MOD_ID);
 
-    public static final RegistryObject<Item> EFFIGY = ITEMS.register("effigy",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> EFFIGY = ITEMS.register("effigy",() -> new EffigyItem(new Item.Properties()
             .tab(ModCreativeTab.instance)
+            .rarity(Rarity.UNCOMMON)
     ));
 
     public static final RegistryObject<Item> WEDDING_RING = ITEMS.register("wedding_ring",() -> new Item(new Item.Properties()
