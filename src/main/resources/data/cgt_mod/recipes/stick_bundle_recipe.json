@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "505",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "cgt_mod:stick_bundle",
+    "count": 1
+  }
+}

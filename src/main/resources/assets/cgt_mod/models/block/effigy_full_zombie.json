@@ -1,0 +1,9 @@
+{
+  "parent": "cgt_mod:custom/effigy_full_zombie",
+  "textures": {
+    "all": "cgt_mod:blocks/effigy_full_zombie",
+    "particle": "cgt_mod:blocks/effigy_full_zombie",
+    "4": "cgt_mod:blocks/effigy_full_zombie"
+  },
+  "render_type": "solid"
+}

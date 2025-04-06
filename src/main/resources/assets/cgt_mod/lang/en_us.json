@@ -1,10 +1,12 @@
 {
   "itemGroup.cgt_tab": "CGT TAB",
+  "item.cgt_mod.little_stone": "Little Stone",
 
   "block.cgt_mod.effigy_block": "Effigy",
   "item.cgt_mod.wedding_ring": "Wedding Ring",
   "item.cgt_mod.guts": "Guts",
   "item.cgt_mod.little_rock": "Little Rock",
+  "item.cgt_mod.stick_bundle": "Stick Bundle",
 
   "item.cgt_mod.pillager_head_on_stick": "Pillager Head on a Stick",
   "item.cgt_mod.player_head_on_stick": "Player Head on a Stick",
@@ -32,6 +34,13 @@
   "item.cgt_mod.skeleton_leg": "Skeleton Leg",
   "item.cgt_mod.villager_leg": "Villager Leg",
   "item.cgt_mod.zombie_leg": "Zombie Leg",
+
+  "block.cgt_mod.effigy_full_player" : "Effigy with 3x Player Heads",
+  "block.cgt_mod.effigy_full_pillager" : "Effigy with 3x Pillager Heads",
+  "block.cgt_mod.effigy_full_villager" : "Effigy with 3x Villager Heads",
+  "block.cgt_mod.effigy_full_skeleton" : "Effigy with 3x Skeleton Heads",
+  "block.cgt_mod.effigy_full_zombie" : "Effigy with 3x Zombie Heads",
+  "block.cgt_mod.effigy_empty_block": "Effigy",
 
   "item.cgt_mod.emmental": "Emmental",
   "item.cgt_mod.camembert": "Camembert",

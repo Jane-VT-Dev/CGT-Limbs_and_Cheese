@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "cgt_mod:block/effigy_full_skeleton"
+    },
+    "facing=east": {
+      "model": "cgt_mod:block/effigy_full_skeleton",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "cgt_mod:block/effigy_full_skeleton",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cgt_mod:block/effigy_full_skeleton",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "cgt_mod:block/effigy_full_skeleton",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "cgt_mod:block/effigy_full_skeleton",
+      "x": 90
+    }
+  }
+}

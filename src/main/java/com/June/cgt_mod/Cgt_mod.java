@@ -1,5 +1,7 @@
 package com.June.cgt_mod;
 
+import com.June.cgt_mod.block.ModBlocks;
+import com.June.cgt_mod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,7 +36,9 @@ public class Cgt_mod {
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         GeckoLib.initialize();
@@ -44,6 +48,8 @@ public class Cgt_mod {
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

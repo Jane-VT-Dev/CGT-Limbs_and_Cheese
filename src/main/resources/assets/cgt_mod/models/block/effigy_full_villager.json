@@ -1,0 +1,9 @@
+{
+  "parent": "cgt_mod:custom/effigy_full_villager",
+  "textures": {
+    "all": "cgt_mod:blocks/effigy_full_villager",
+    "particle": "cgt_mod:blocks/effigy_full_villager",
+    "1": "cgt_mod:blocks/effigy_full_villager"
+  },
+  "render_type": "solid"
+}

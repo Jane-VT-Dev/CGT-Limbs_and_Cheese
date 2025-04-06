@@ -1,0 +1,9 @@
+{
+  "parent": "cgt_mod:custom/effigy_full_pillager",
+  "textures": {
+    "all": "cgt_mod:blocks/effigy_full_pillager",
+    "particle": "cgt_mod:blocks/effigy_full_pillager",
+    "1": "cgt_mod:blocks/effigy_full_pillager"
+  },
+  "render_type": "solid"
+}

@@ -16,6 +16,8 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cgt_mod.MOD_ID);
 
+    public static final RegistryObject<Item> STICK_BUNDLE = ITEMS.register("stick_bundle",() -> new Item(new Item.Properties().tab(ModCreativeTab.instance)));
+
     public static final RegistryObject<Item> LITTLE_STONE = ITEMS.register("little_stone",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
     ));

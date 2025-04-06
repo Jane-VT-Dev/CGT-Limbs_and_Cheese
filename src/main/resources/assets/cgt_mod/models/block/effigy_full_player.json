@@ -1,0 +1,9 @@
+{
+  "parent": "cgt_mod:custom/effigy_full_player",
+  "textures": {
+    "all": "cgt_mod:blocks/effigy_full_player",
+    "particle": "cgt_mod:blocks/effigy_full_player",
+    "1": "cgt_mod:blocks/effigy_full_player"
+  },
+  "render_type": "solid"
+}

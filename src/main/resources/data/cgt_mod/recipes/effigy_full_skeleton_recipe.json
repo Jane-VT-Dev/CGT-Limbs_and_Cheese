@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:skeleton_skull"
+    },
+    {
+      "item": "minecraft:skeleton_skull"
+    },
+    {
+      "item": "minecraft:skeleton_skull"
+    },
+    {
+      "item": "cgt_mod:effigy_empty_block"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:effigy_full_skeleton",
+    "count": 1
+  }
+}
