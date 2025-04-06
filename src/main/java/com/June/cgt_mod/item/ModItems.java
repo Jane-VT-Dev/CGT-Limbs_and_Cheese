@@ -69,10 +69,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> PILLAGER_HEAD = ITEMS.register("pillager_head",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
+            .rarity(Rarity.UNCOMMON)
     ));
 
     public static final RegistryObject<Item> VILLAGER_HEAD = ITEMS.register("villager_head",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
+            .rarity(Rarity.UNCOMMON)
     ));
 
     public static final RegistryObject<Item> ZOMBIE_TORSO = ITEMS.register("zombie_torso",() -> new Item(new Item.Properties()
