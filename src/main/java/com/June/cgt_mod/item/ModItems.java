@@ -16,9 +16,8 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Cgt_mod.MOD_ID);
 
-    public static final RegistryObject<Item> EFFIGY = ITEMS.register("effigy",() -> new EffigyItem(new Item.Properties()
+    public static final RegistryObject<Item> LITTLE_STONE = ITEMS.register("little_stone",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
-            .rarity(Rarity.UNCOMMON)
     ));
 
     public static final RegistryObject<Item> WEDDING_RING = ITEMS.register("wedding_ring",() -> new Item(new Item.Properties()

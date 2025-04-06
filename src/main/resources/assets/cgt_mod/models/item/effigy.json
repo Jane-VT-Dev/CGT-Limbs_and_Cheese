@@ -1,5 +1,5 @@
 {
-  "parent": "item/generated",
+  "parent": "cgt_mod:block/effigy_block",
   "textures": {
     "layer0": "cgt_mod:items/effigy"
   }

@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 import static com.June.cgt_mod.item.ModItems.ITEMS;
 
@@ -34,9 +35,10 @@ public class Cgt_mod {
 
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-
+        BLOCKS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        GeckoLib.initialize();
     }
 
 

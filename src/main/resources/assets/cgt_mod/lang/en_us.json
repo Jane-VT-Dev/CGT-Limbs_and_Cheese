@@ -1,9 +1,10 @@
 {
   "itemGroup.cgt_tab": "CGT TAB",
 
-  "item.cgt_mod.effigy": "Effigy",
+  "block.cgt_mod.effigy_block": "Effigy",
   "item.cgt_mod.wedding_ring": "Wedding Ring",
   "item.cgt_mod.guts": "Guts",
+  "item.cgt_mod.little_rock": "Little Rock",
 
   "item.cgt_mod.pillager_head_on_stick": "Pillager Head on a Stick",
   "item.cgt_mod.player_head_on_stick": "Player Head on a Stick",
