@@ -35,7 +35,6 @@ public class Cgt_mod {
 
         // Register the Deferred Register to the mod event bus so items get registered
         ITEMS.register(modEventBus);
-        BLOCKS.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         GeckoLib.initialize();
