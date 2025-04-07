@@ -27,6 +27,13 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
+    public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(4)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
 
     public static final RegistryObject<Item> ZOMBIE_HEAD_ON_STICK = ITEMS.register("zombie_head_on_stick",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()

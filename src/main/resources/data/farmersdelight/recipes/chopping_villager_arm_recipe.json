@@ -2,16 +2,16 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "cgt_mod:zombie_arm"
+      "item": "cgt_mod:villager_arm"
     }
   ],
   "tool": {
-    "type": "farmersdelight:tool",
-    "tool": "axe"
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
   },
   "result": [
     {
-      "item": "minecraft:rotten_flesh",
+      "item": "minecraft:human_flesh",
       "count": 5
     },
     {

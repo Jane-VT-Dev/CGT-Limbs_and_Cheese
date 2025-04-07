@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "cgt_mod:skeleton_arm"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
+  },
+  "result": [
+    {
+      "item": "minecraft:bone",
+      "count": 5
+    }
+  ],
+  "sound": "minecraft:item.axe.strip"
+}
