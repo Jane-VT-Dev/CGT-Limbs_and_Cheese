@@ -45,8 +45,6 @@ public class ModBlocks {
                 () -> new EffigyFPlBlock(BlockBehaviour.Properties.of(Material.WOOD)
                         .strength(6f).requiresCorrectToolForDrops()));
 
-
-
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);

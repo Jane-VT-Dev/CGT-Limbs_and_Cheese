@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:milk_bowl"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:camembert",
+    "count": 1
+  }
+}

@@ -2,8 +2,11 @@ package com.June.cgt_mod.item;
 
 import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.ModCreativeTab;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,7 +33,124 @@ public class ModItems {
     public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(4)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 0), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 3000, 3), 0.3F)
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 600, 9), 0.5F)
                     .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> GUTS = ITEMS.register("guts",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(6)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 3000, 3), 0.3F)
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 3000, 9), 0.9F)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_ZOMBIE_ARM = ITEMS.register("cooked_zombie_arm",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_VILLAGER_ARM = ITEMS.register("cooked_villager_arm",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PILLAGER_ARM = ITEMS.register("cooked_pillager_arm",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PLAYER_ARM = ITEMS.register("cooked_player_arm",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_ZOMBIE_LEG = ITEMS.register("cooked_zombie_leg",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_VILLAGER_LEG = ITEMS.register("cooked_villager_leg",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PILLAGER_LEG = ITEMS.register("cooked_pillager_leg",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PLAYER_LEG = ITEMS.register("cooked_player_leg",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_ZOMBIE_TORSO = ITEMS.register("cooked_zombie_torso",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(7)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_VILLAGER_TORSO = ITEMS.register("cooked_villager_torso",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(7)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PILLAGER_TORSO = ITEMS.register("cooked_pillager_torso",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(7)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> COOKED_PLAYER_TORSO = ITEMS.register("cooked_player_torso",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(7)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> SOUP_DE_CANNIBAL = ITEMS.register("soup_de_cannibal",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(12)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -146,7 +266,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> EMMENTAL = ITEMS.register("emmental",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(6)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -167,14 +287,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> EPOISSES = ITEMS.register("epoisses",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(6)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 0), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> TOMME_DU_JURA = ITEMS.register("tomme_du_jura",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(6)
+                    .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -188,7 +310,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> MORBIER = ITEMS.register("morbier",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(6)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 0), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -196,48 +319,46 @@ public class ModItems {
     public static final RegistryObject<Item> RACLETTE = ITEMS.register("raclette",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1000, 0), 0.8F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> BRIA_SAVARIN = ITEMS.register("bria_savarin",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(6)
+                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 3000, 0), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 3000, 0), 0.1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> CASU_MARZU = ITEMS.register("casu_marzu",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(1)
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200, 5), 0.7F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> CHEDDAR = ITEMS.register("cheddar",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
-                    .build())
-            .tab(ModCreativeTab.instance)
-    ));
-
-    public static final RegistryObject<Item> GUTS = ITEMS.register("guts",() -> new Item(new Item.Properties()
-            .food(new FoodProperties.Builder()
-                    .nutrition(5)
-                    .alwaysEat()
+                    .nutrition(10)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> RACLETTE_PLATE = ITEMS.register("raclette_plate",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                    .nutrition(5)
+                    .nutrition(16)
                     .alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3000, 1), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> SHEEP_MILK_BUCKET = ITEMS.register("sheep_milk_bucket",() -> new Item(new Item.Properties()
+            .stacksTo(1)
             .tab(ModCreativeTab.instance)
     ));
 
@@ -257,6 +378,14 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
+    public static final RegistryObject<Item> MILK_BOWL = ITEMS.register("milk_bowl",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
     public static final RegistryObject<Item> SHEEP_MILK_BASKET = ITEMS.register("sheep_milk_basket",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
@@ -265,9 +394,56 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
+    public static final RegistryObject<Item> SHEEP_MILK = ITEMS.register("sheep_milk",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> HIGHSHROOM = ITEMS.register("highshroom",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 400, 10), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> IEIUNIUM_HIGHSHROOM = ITEMS.register("ieiunium_highshroom",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 400, 10), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 5), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> FORTIS_HIGHSHROOM = ITEMS.register("fortis_highshroom",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 1000, 10), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3000, 1), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 1), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+    public static final RegistryObject<Item> GLOWIUS_HIGHSHROOM = ITEMS.register("glowius_highshroom",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(2)
+                    .alwaysEat()
+                    .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 1000, 1), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 1000, 10), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3000, 1), 1F)
+                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .build())
+            .tab(ModCreativeTab.instance)
+    ));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
-
 
 }

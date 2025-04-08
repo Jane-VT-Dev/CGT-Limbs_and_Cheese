@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:sheep_milk"
+    },
+    {
+      "item": "cgt_mod:sheep_milk"
+    },
+    {
+      "item": "cgt_mod:sheep_milk"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:sheep_milk_bucket",
+    "count": 1
+  }
+}

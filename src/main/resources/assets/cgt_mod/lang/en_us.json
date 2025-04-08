@@ -60,7 +60,10 @@
   "item.cgt_mod.milk_basket": "Milk Basket",
   "item.cgt_mod.sheep_milk_basket": "Sheep Milk Basket",
   "item.cgt_mod.sheep_milk_bowl": "Sheep Milk Bowl",
+  "item.cgt_mod.milk_bowl": "Milk Bowl",
 
 
-  "item.cgt_mod.sheep_milk_bucket": "Sheep Milk Bucket"
+  "item.cgt_mod.sheep_milk_bucket": "Sheep Milk Bucket",
+  "item.cgt_mod.sheep_milk": "Sheep Milk"
+
 }

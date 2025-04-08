@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod:comte"
+  },
+
+  "result":"cgt_mod:cheddar",
+
+  "experience":0.5,
+  "cookingtime":150
+}

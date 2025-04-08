@@ -12,6 +12,6 @@ public class ModCreativeTab extends CreativeModeTab {
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(Items.BARRIER);
+        return new ItemStack(Items.GREEN_STAINED_GLASS);
     }
 }

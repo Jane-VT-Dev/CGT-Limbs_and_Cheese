@@ -13,9 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import software.bernie.geckolib3.GeckoLib;
-
-import static com.June.cgt_mod.item.ModItems.ITEMS;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Cgt_mod.MOD_ID)
@@ -41,7 +38,6 @@ public class Cgt_mod {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        //GeckoLib.initialize();
     }
 
 
