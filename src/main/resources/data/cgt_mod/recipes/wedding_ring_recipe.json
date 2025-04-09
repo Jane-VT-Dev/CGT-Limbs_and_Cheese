@@ -1,0 +1,20 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " B ",
+    "A A",
+    " A "
+  ],
+  "key":{
+    "A":{
+      "item":"minecraft:gold_ingot"
+    },
+    "B":{
+      "item":"cgt_mod:diamond_fragment"
+    }
+  },
+  "result":{
+    "item":"cgt_mod:wedding_ring",
+    "count":1
+  }
+}

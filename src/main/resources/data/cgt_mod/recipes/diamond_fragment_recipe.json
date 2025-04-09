@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_block"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:diamond_fragment",
+    "count": 1
+  }
+}

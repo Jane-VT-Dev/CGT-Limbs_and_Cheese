@@ -93,7 +93,9 @@
 
   "item.cgt_mod.true_bible_1": "[W.I.P] True Bible 1",
   "item.cgt_mod.true_bible_2": "[W.I.P] True Bible 2",
-  "item.cgt_mod.true_bible_3": "[W.I.P] True Bible 3"
+  "item.cgt_mod.true_bible_3": "[W.I.P] True Bible 3",
+
+  "item.cgt_mod.diamond_fragment": "Diamond Fragment"
 
 
 }

@@ -446,14 +446,24 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
 
-    ));public static final RegistryObject<Item> TRUE_BIBLE_2 = ITEMS.register("true_bible_2",() -> new Item(new Item.Properties()
+    ));
+
+    public static final RegistryObject<Item> TRUE_BIBLE_2 = ITEMS.register("true_bible_2",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
 
-    ));public static final RegistryObject<Item> TRUE_BIBLE_3 = ITEMS.register("true_bible_3",() -> new Item(new Item.Properties()
+    ));
+
+    public static final RegistryObject<Item> TRUE_BIBLE_3 = ITEMS.register("true_bible_3",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
     ));
+
+    public static final RegistryObject<Item> DIAMOND_FRAGMENT = ITEMS.register("diamond_fragment",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
