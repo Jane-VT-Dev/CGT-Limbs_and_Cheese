@@ -36,6 +36,26 @@
   "item.cgt_mod.villager_leg": "Villager Leg",
   "item.cgt_mod.zombie_leg": "Zombie Leg",
 
+  "item.cgt_mod.cooked_player_torso": "Cooked Player Torso",
+  "item.cgt_mod.cooked_pillager_torso": "Cooked Pillager Torso",
+  "item.cgt_mod.cooked_skeleton_torso": "Cooked Skeleton Torso",
+  "item.cgt_mod.cooked_villager_torso": "Cooked Villager Torso",
+  "item.cgt_mod.cooked_zombie_torso": "Cooked Zombie Torso",
+
+  "item.cgt_mod.cooked_player_arm": "Cooked Player Arm",
+  "item.cgt_mod.cooked_pillager_arm": "Cooked Pillager Arm",
+  "item.cgt_mod.cooked_skeleton_arm": "Cooked Skeleton Arm",
+  "item.cgt_mod.cooked_villager_arm": "Cooked Villager Arm",
+  "item.cgt_mod.cooked_zombie_arm": "Cooked Zombie Arm",
+
+  "item.cgt_mod.cooked_player_leg": "Cooked Player Leg",
+  "item.cgt_mod.cooked_pillager_leg": "Cooked Pillager Leg",
+  "item.cgt_mod.cooked_skeleton_leg": "Cooked Skeleton Leg",
+  "item.cgt_mod.cooked_villager_leg": "Cooked Villager Leg",
+  "item.cgt_mod.cooked_zombie_leg": "Cooked Zombie Leg",
+
+  "item.cgt_mod.soup_de_cannibal": "Cooked de cannibal",
+
   "block.cgt_mod.effigy_full_player" : "Effigy with 3x Player Heads",
   "block.cgt_mod.effigy_full_pillager" : "Effigy with 3x Pillager Heads",
   "block.cgt_mod.effigy_full_villager" : "Effigy with 3x Villager Heads",
@@ -64,6 +84,16 @@
 
 
   "item.cgt_mod.sheep_milk_bucket": "Sheep Milk Bucket",
-  "item.cgt_mod.sheep_milk": "Sheep Milk"
+  "item.cgt_mod.sheep_milk": "Sheep Milk",
+
+  "item.cgt_mod.highshroom": "Highshroom",
+  "item.cgt_mod.ieiunium_highshroom": "Ieiunium Highshroom",
+  "item.cgt_mod.fortis_highshroom": "Fortis Highshroom",
+  "item.cgt_mod.glowius_highshroom": "Glowius  Highshroom",
+
+  "item.cgt_mod.true_bible_1": "True Bible 1",
+  "item.cgt_mod.true_bible_2": "True Bible 2",
+  "item.cgt_mod.true_bible_3": "True Bible 3"
+
 
 }

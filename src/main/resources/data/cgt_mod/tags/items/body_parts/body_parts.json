@@ -1,0 +1,85 @@
+{
+  "values": [
+    {
+      "id": "cgt_mod:zombie_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:pillager_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:villager_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:player_arm",
+      "required": false
+    },
+
+
+    {
+      "id": "cgt_mod:zombie_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:skeleton_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:villager_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:pillager_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:player_leg",
+      "required": false
+    },
+
+    {
+      "id": "cgt_mod:zombie_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:skeleton_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:villager_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:pillager_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:player_torso",
+      "required": false
+    },
+
+
+    {
+      "id": "minecraft:zombie_head",
+      "required": false
+    },
+    {
+      "id": "minecraft:skeleton_skull",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:villager_head",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:pillager_head",
+      "required": false
+    },
+    {
+      "id": "minecraft:player_head",
+      "required": false
+    }
+  ]
+}

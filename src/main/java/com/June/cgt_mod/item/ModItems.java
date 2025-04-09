@@ -6,13 +6,13 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import static net.minecraft.world.item.Rarity.RARE;
 
 public class ModItems {
 
@@ -440,6 +440,19 @@ public class ModItems {
                     .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> TRUE_BIBLE_1 = ITEMS.register("true_bible_1",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+            .rarity(RARE)
+
+    ));public static final RegistryObject<Item> TRUE_BIBLE_2 = ITEMS.register("true_bible_2",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+            .rarity(RARE)
+
+    ));public static final RegistryObject<Item> TRUE_BIBLE_3 = ITEMS.register("true_bible_3",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+            .rarity(RARE)
     ));
 
     public static void register(IEventBus eventBus){
