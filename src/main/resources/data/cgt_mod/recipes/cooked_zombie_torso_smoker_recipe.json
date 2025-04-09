@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod:zombie_torso"
+  },
+
+  "result":"cgt_mod:cooked_zombie_torso",
+
+  "experience":0.5,
+  "cookingtime":150
+}
