@@ -7,3 +7,4 @@ we shall discuss the matter further via Discord/Email (if posted) otherwise via 
 ====================================================================================================================================================
 THIS MOD IS FREE TO USE IN OTHER MODS/MODPACKS TO USE ONLY CREDIT & LINK TO THIS GITHUB OR MOD DOWNLOAD CHANNELS (CURSE FORGE &|| MODRINTH) NECESARY
 ====================================================================================================================================================
+this mod needs Farmer's Delight and Alex's Mobs to work fully!
