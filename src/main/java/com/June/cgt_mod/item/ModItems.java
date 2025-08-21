@@ -4,9 +4,13 @@ import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.ModCreativeTab;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -442,19 +446,19 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> TRUE_BIBLE_1 = ITEMS.register("true_bible_1",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TRUE_BIBLE_1 = ITEMS.register("true_bible_1",() -> new TrueBibleOneItem(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
 
     ));
 
-    public static final RegistryObject<Item> TRUE_BIBLE_2 = ITEMS.register("true_bible_2",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TRUE_BIBLE_2 = ITEMS.register("true_bible_2",() -> new TrueBibleTwoItem(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
 
     ));
 
-    public static final RegistryObject<Item> TRUE_BIBLE_3 = ITEMS.register("true_bible_3",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TRUE_BIBLE_3 = ITEMS.register("true_bible_3",() -> new TrueBibleThreeItem(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(RARE)
     ));
@@ -462,6 +466,13 @@ public class ModItems {
     public static final RegistryObject<Item> DIAMOND_FRAGMENT = ITEMS.register("diamond_fragment",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
     ));
+
+//Armor Items
+
+
+    public static final RegistryObject<ArmorItem> AKINA_JACKET = ITEMS.register("akina_jacket",() -> new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeTab.instance)));
+
+
 
 
 
