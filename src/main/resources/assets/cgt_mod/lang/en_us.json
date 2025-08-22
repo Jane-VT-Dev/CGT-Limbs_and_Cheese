@@ -63,6 +63,8 @@
   "block.cgt_mod.effigy_full_zombie" : "Effigy with 3x Zombie Heads",
   "block.cgt_mod.effigy_empty_block": "Effigy",
 
+  "block.cgt_mod.zombie_head_jar": "Zombie Head in Milk Jar [W.I.P]",
+
   "item.cgt_mod.emmental": "Emmental",
   "item.cgt_mod.camembert": "Camembert",
   "item.cgt_mod.fromage_de_chevre": "Fromage de Chevre",
@@ -94,6 +96,9 @@
   "item.cgt_mod.true_bible_1": "True Bible 1",
   "item.cgt_mod.true_bible_2": "True Bible 2",
   "item.cgt_mod.true_bible_3": "True Bible 3",
+  "item.cgt_mod.torn_page": "Torn Page",
+
+  "item.cgt_mod.human_leather": "Human Leather",
 
   "item.cgt_mod.diamond_fragment": "Diamond Fragment"
 

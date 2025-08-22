@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "cgt_mod:zombie_arm"
+      "tag": "cgt_mod:body_parts/zombie_parts_cutting_ingredients"
     }
   ],
   "tool": {
@@ -16,6 +16,10 @@
     },
     {
       "item": "minecraft:bone",
+      "count": 1
+    },
+    {
+      "item": "cgt_mod:human_leather",
       "count": 1
     }
   ],

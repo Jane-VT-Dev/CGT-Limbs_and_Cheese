@@ -467,13 +467,13 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-//Armor Items
+    public static final RegistryObject<Item> TORN_PAGE = ITEMS.register("torn_page",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
 
-
-    public static final RegistryObject<ArmorItem> AKINA_JACKET = ITEMS.register("akina_jacket",() -> new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeTab.instance)));
-
-
-
+    public static final RegistryObject<Item> HUMAN_LEATHER = ITEMS.register("human_leather",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
 
 
     public static void register(IEventBus eventBus){

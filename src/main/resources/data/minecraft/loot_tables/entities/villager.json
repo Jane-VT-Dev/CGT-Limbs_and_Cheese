@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cgt_mod:villaher_head",
+          "name": "cgt_mod:villager_head",
           "weight": 10,
           "functions": [
             {

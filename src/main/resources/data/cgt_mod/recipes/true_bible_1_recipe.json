@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:torn_page"
+    },
+    {
+      "item": "cgt_mod:torn_page"
+    },
+    {
+      "item": "cgt_mod:torn_page"
+    },
+    {
+      "item": "cgt_mod:human_leather"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:true_bible_1",
+    "count": 1
+  }
+}
