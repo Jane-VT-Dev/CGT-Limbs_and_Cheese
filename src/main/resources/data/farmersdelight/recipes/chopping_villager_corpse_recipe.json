@@ -21,6 +21,10 @@
     {
       "item": "cgt_mod:villager_leg",
       "count": 2
+    },
+    {
+      "item": "cgt_mod:villager_head",
+      "count": 1
     }
   ],
   "sound": "minecraft:item.axe.strip"

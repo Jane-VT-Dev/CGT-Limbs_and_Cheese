@@ -6,6 +6,11 @@ Cursed Bibles
 - Added item models for Cursed Bibles I, II, III, and IV.
 - Added matching texture assets for Cursed Bibles I, II, III, and IV.
 - Cursed Bibles use the custom CGT TAB.
+- Added a shapeless recipe using three paper and one Human Leather to craft
+  Cursed Bible I.
+- Added a Torn Page recipe using Paper, Human Flesh, and Human Leather.
+- Added shapeless progression recipes that combine each of Cursed Bibles I, II,
+  and III with a Torn Page to craft the next volume.
 
 Sheep Milking
 -------------
@@ -21,7 +26,7 @@ Drops
 - Replaced the player, zombie, pillager, and villager torso, arm, and leg drops
   with one matching corpse item.
 - Added Farmers Delight chopping recipes that turn each corpse into its
-  matching torso, two arms, and two legs.
+  matching torso, two arms, two legs, and head.
 
 Effigy
 ------

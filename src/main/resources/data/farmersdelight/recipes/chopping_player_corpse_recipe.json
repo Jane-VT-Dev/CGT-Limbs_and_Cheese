@@ -21,6 +21,10 @@
     {
       "item": "cgt_mod:player_leg",
       "count": 2
+    },
+    {
+      "item": "minecraft:player_head",
+      "count": 1
     }
   ],
   "sound": "minecraft:item.axe.strip"
