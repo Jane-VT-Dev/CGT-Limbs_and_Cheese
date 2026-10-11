@@ -1,10 +1,14 @@
 Mod description:
-This is a random bunch for the Central Gaming Station experience,basicaly a bunch of stuff make things more fun!
-most of the textures are made by one of the members who contributed to this mod, for the ones that are not I/We have no rights on them
+This is a mod that i made together with my friends and for my friends, everyone else is ofc welcome to try it out.
+This mod adds Questionable Items, Canibalsm , Cheese... a lot of Cheese and other food!
 ====================================================================================================================================================
-If you / or your company / group owns any of the textures please reach out to me (June),
-we shall discuss the matter further via Discord/Email (if posted) otherwise via Github Messages!
+Textures & Models are self made, all rights are reserved to the original owner.
 ====================================================================================================================================================
-THIS MOD IS FREE TO USE IN OTHER MODS/MODPACKS TO USE ONLY CREDIT & LINK TO THIS GITHUB OR MOD DOWNLOAD CHANNELS (CURSE FORGE &|| MODRINTH) NECESARY
+You Are free to use this mod in your modpack, as long as it stays within Curseforge / Modrinth.
+This Mod is only available on my GitHub,Curseforge and Modrinth.
 ====================================================================================================================================================
-this mod needs Farmer's Delight and Alex's Mobs to work fully!
+Dependencies for this mod are:
+Farmer's Delight
+Alex's mobs
+====================================================================================================================================================
+I recommend to use a recipe look up mod like JEI/REI/EMI.
