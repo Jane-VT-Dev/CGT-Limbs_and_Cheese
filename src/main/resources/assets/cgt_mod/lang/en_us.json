@@ -22,6 +22,10 @@
   "item.cgt_mod.skeleton_torso": "Skeleton Torso",
   "item.cgt_mod.villager_torso": "Villager Torso",
   "item.cgt_mod.zombie_torso": "Zombie Torso",
+  "item.cgt_mod.player_corpse": "Player Corpse",
+  "item.cgt_mod.pillager_corpse": "Pillager Corpse",
+  "item.cgt_mod.villager_corpse": "Villager Corpse",
+  "item.cgt_mod.zombie_corpse": "Zombie Corpse",
 
   "item.cgt_mod.player_arm": "Player Arm",
   "item.cgt_mod.pillager_arm": "Pillager Arm",

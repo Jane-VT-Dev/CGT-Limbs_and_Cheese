@@ -16,13 +16,19 @@ Sheep Milking
   - A bucket to receive Sheep Milk Bucket.
   - A basket to receive Sheep Milk Basket.
 
+Drops
+------------
+- Replaced the player, zombie, pillager, and villager torso, arm, and leg drops
+  with one matching corpse item.
+- Added Farmers Delight chopping recipes that turn each corpse into its
+  matching torso, two arms, and two legs.
+
 Effigy
 ------
+- Extended the Effigy's selectable hitbox to two blocks tall.
 - Added a GUI texture at assets/cgt_mod/textures/gui/effigy.png.
 - Updated the Effigy screen to render the texture with the textured GUI shader
   and correct texture dimensions.
-- Changed the title and inventory label to Minecraft's conventional GUI text
-  color.
 - Removed all Effigy versions except the Empty Effigy.
 
 Creative Tab
@@ -30,8 +36,12 @@ Creative Tab
 - Changed the CGT TAB icon to cycle through the Pillager, Player, Skeleton,
   Villager, and Zombie heads on sticks.
 
+
+  Item Changes
+  ----------------
 - Removed Wedding Ring.
 - Removed Diamond Fragment.
+- Added Pillager,Villager,Zombie,Corpse
 
 Wandering Trader
 ----------------

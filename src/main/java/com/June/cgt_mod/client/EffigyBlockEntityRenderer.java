@@ -2,6 +2,7 @@ package com.June.cgt_mod.client;
 
 import com.June.cgt_mod.block.custom.EffigyEmptyBlock;
 import com.June.cgt_mod.block.entity.EffigyBlockEntity;
+import com.June.cgt_mod.item.ModItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
@@ -24,6 +25,7 @@ public class EffigyBlockEntityRenderer implements BlockEntityRenderer<EffigyBloc
 		if (facing == Direction.UP || facing == Direction.DOWN) {
 			facing = Direction.NORTH;
 		}
+		facing = facing.getOpposite();
 		Direction right = facing.getClockWise();
 		double[][] offsets = {{-0.50, 1.20}, {0.0, 1.75}, {0.50, 1.20}};
 
@@ -34,9 +36,11 @@ public class EffigyBlockEntityRenderer implements BlockEntityRenderer<EffigyBloc
 			}
 
 			double side = offsets[slot][0];
+			double forward = stack.is(ModItems.PILLAGER_HEAD.get()) || stack.is(ModItems.VILLAGER_HEAD.get())
+					? -1.0 / 16.0 : 0.0;
 			poseStack.pushPose();
-			poseStack.translate(0.5 + right.getStepX() * side,
-					offsets[slot][1], 0.5 + right.getStepZ() * side);
+			poseStack.translate(0.5 + right.getStepX() * side + facing.getStepX() * forward,
+					offsets[slot][1], 0.5 + right.getStepZ() * side + facing.getStepZ() * forward);
 			poseStack.mulPose(Vector3f.YP.rotationDegrees(facing.toYRot()));
 			poseStack.scale(0.8F, 0.8F, 0.8F);
 			Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemTransforms.TransformType.FIXED,

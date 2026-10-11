@@ -1,6 +1,7 @@
 package com.June.cgt_mod.block.entity;
 
 import com.June.cgt_mod.menu.EffigyMenu;
+import com.June.cgt_mod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
@@ -77,7 +78,9 @@ public class EffigyBlockEntity extends BlockEntity implements Container, MenuPro
 	}
 
 	public static boolean isHeadItem(ItemStack stack) {
-		return stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof SkullBlock;
+		return stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof SkullBlock
+				|| stack.is(ModItems.PILLAGER_HEAD.get())
+				|| stack.is(ModItems.VILLAGER_HEAD.get());
 	}
 
 	@Override

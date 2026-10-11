@@ -65,6 +65,11 @@ public class EffigyEmptyBlock extends FallingBlock implements EntityBlock {
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return Shapes.box(0.0, 0.0, 0.0, 1.0, 2.0, 1.0);
+	}
+
+	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
 		builder.add(FACING);
 	}

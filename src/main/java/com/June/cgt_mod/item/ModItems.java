@@ -185,14 +185,6 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> PLAYER_HEAD_ON_STICK = ITEMS.register("player_head_on_stick",() -> new Item(new Item.Properties()
-            .food(new FoodProperties.Builder()
-                    .nutrition(5)
-                    .alwaysEat()
-                    .build())
-            .tab(ModCreativeTab.instance)
-    ));
-
     public static final RegistryObject<Item> PILLAGER_HEAD = ITEMS.register("pillager_head",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(Rarity.UNCOMMON)
@@ -201,6 +193,14 @@ public class ModItems {
     public static final RegistryObject<Item> VILLAGER_HEAD = ITEMS.register("villager_head",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
             .rarity(Rarity.UNCOMMON)
+    ));
+
+    public static final RegistryObject<Item> PLAYER_HEAD_ON_STICK = ITEMS.register("player_head_on_stick",() -> new Item(new Item.Properties()
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .alwaysEat()
+                    .build())
+            .tab(ModCreativeTab.instance)
     ));
 
     public static final RegistryObject<Item> ZOMBIE_TORSO = ITEMS.register("zombie_torso",() -> new Item(new Item.Properties()
@@ -220,6 +220,22 @@ public class ModItems {
     ));
 
     public static final RegistryObject<Item> PLAYER_TORSO = ITEMS.register("player_torso",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> ZOMBIE_CORPSE = ITEMS.register("zombie_corpse",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> PILLAGER_CORPSE = ITEMS.register("pillager_corpse",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> VILLAGER_CORPSE = ITEMS.register("villager_corpse",() -> new Item(new Item.Properties()
+            .tab(ModCreativeTab.instance)
+    ));
+
+    public static final RegistryObject<Item> PLAYER_CORPSE = ITEMS.register("player_corpse",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
     ));
 
