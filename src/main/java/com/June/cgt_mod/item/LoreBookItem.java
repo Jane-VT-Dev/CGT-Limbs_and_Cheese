@@ -2,7 +2,6 @@ package com.June.cgt_mod.item;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.BookViewScreen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;

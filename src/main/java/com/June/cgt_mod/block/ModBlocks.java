@@ -25,26 +25,6 @@ public class ModBlocks {
                 () -> new EffigyEmptyBlock(BlockBehaviour.Properties.of(Material.WOOD)
                         .strength(6f).requiresCorrectToolForDrops()));
 
-        public static final RegistryObject<Block> EFFIGY_FULL_ZOMBIE = registerBlock("effigy_full_zombie",
-                () -> new EffigyFZBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                        .strength(6f).requiresCorrectToolForDrops()));
-
-        public static final RegistryObject<Block> EFFIGY_FULL_SKELETON = registerBlock("effigy_full_skeleton",
-                () -> new EffigyFSBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                        .strength(6f).requiresCorrectToolForDrops()));
-
-        public static final RegistryObject<Block> EFFIGY_FULL_PILLAGER = registerBlock("effigy_full_pillager",
-                () -> new EffigyFPBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                        .strength(6f).requiresCorrectToolForDrops()));
-
-        public static final RegistryObject<Block> EFFIGY_FULL_VILLAGER = registerBlock("effigy_full_villager",
-                () -> new EffigyFVBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                        .strength(6f).requiresCorrectToolForDrops()));
-
-        public static final RegistryObject<Block> EFFIGY_FULL_PLAYER = registerBlock("effigy_full_player",
-                () -> new EffigyFPlBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                        .strength(6f).requiresCorrectToolForDrops()));
-
         public static final RegistryObject<Block> ZOMBIE_HEAD_JAR = registerBlock("zombie_head_jar",
                 () -> new Block(BlockBehaviour.Properties.of(Material.GLASS)));
 

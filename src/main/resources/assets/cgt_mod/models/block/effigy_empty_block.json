@@ -119,7 +119,7 @@
 	],
 	"groups": [
 		{
-			"name": "effigy_full_zombie",
+			"name": "effigy_empty_block",
 			"origin": [8, 8, 8],
 			"color": 0,
 			"children": [

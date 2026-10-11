@@ -1,19 +1,20 @@
 {
   "variants": {
     "facing=north": {
-      "model": "cgt_mod:block/effigy_empty_block"
-    },
-    "facing=east": {
       "model": "cgt_mod:block/effigy_empty_block",
       "y": 90
     },
-    "facing=south": {
+    "facing=east": {
       "model": "cgt_mod:block/effigy_empty_block",
       "y": 180
     },
-    "facing=west": {
+    "facing=south": {
       "model": "cgt_mod:block/effigy_empty_block",
       "y": 270
+    },
+    "facing=west": {
+      "model": "cgt_mod:block/effigy_empty_block",
+      "y": 0
     },
     "facing=up": {
       "model": "cgt_mod:block/effigy_empty_block",

@@ -56,12 +56,8 @@
 
   "item.cgt_mod.soup_de_cannibal": "Cooked de cannibal",
 
-  "block.cgt_mod.effigy_full_player" : "Effigy with 3x Player Heads",
-  "block.cgt_mod.effigy_full_pillager" : "Effigy with 3x Pillager Heads",
-  "block.cgt_mod.effigy_full_villager" : "Effigy with 3x Villager Heads",
-  "block.cgt_mod.effigy_full_skeleton" : "Effigy with 3x Skeleton Heads",
-  "block.cgt_mod.effigy_full_zombie" : "Effigy with 3x Zombie Heads",
   "block.cgt_mod.effigy_empty_block": "Effigy",
+  "container.cgt_mod.effigy": "Effigy",
 
   "block.cgt_mod.zombie_head_jar": "Zombie Head in Milk Jar [W.I.P]",
 
@@ -93,9 +89,11 @@
   "item.cgt_mod.fortis_highshroom": "Fortis Highshroom",
   "item.cgt_mod.glowius_highshroom": "Glowius  Highshroom",
 
-  "item.cgt_mod.true_bible_1": "True Bible 1",
-  "item.cgt_mod.true_bible_2": "True Bible 2",
-  "item.cgt_mod.true_bible_3": "True Bible 3",
+  "item.cgt_mod.cursed_bible_i": "Cursed Bible I",
+  "item.cgt_mod.cursed_bible_ii": "Cursed Bible II",
+  "item.cgt_mod.cursed_bible_iii": "Cursed Bible III",
+  "item.cgt_mod.cursed_bible_iv": "Cursed Bible IV",
+
   "item.cgt_mod.torn_page": "Torn Page",
 
   "item.cgt_mod.human_leather": "Human Leather",

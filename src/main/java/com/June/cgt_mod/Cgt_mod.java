@@ -1,9 +1,15 @@
 package com.June.cgt_mod;
 
 import com.June.cgt_mod.block.ModBlocks;
+import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.item.ModItems;
+import com.June.cgt_mod.client.EffigyBlockEntityRenderer;
+import com.June.cgt_mod.client.EffigyScreen;
+import com.June.cgt_mod.menu.ModMenus;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,6 +41,8 @@ public class Cgt_mod {
         // Register the Deferred Register to the mod event bus so items get registered
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenus.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -59,7 +67,12 @@ public class Cgt_mod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new));
+        }
 
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.EFFIGY_EMPTY.get(), EffigyBlockEntityRenderer::new);
         }
     }
 }
