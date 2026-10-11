@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "cgt_mod:pillager_head"},
+    {"item": "minecraft:flower_pot"}
+  ],
+  "result": {"item": "cgt_mod:pillager_head_pot"}
+}

@@ -4,10 +4,15 @@ import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.item.ModItems;
 import com.June.cgt_mod.client.EffigyBlockEntityRenderer;
+import com.June.cgt_mod.client.PlayerHeadPotRenderer;
 import com.June.cgt_mod.client.EffigyScreen;
+import com.June.cgt_mod.client.JarScreen;
+import com.June.cgt_mod.client.JarBlockEntityRenderer;
 import com.June.cgt_mod.menu.ModMenus;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.npc.WanderingTrader;
@@ -133,12 +138,18 @@ public class Cgt_mod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            event.enqueueWork(() -> MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new));
+            event.enqueueWork(() -> {
+                MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new);
+                MenuScreens.register(ModMenus.JAR_MENU.get(), JarScreen::new);
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
+            });
         }
 
         @SubscribeEvent
         public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(ModBlockEntities.EFFIGY_EMPTY.get(), EffigyBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.PLAYER_HEAD_POT.get(), PlayerHeadPotRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.JAR.get(), JarBlockEntityRenderer::new);
         }
 
     }

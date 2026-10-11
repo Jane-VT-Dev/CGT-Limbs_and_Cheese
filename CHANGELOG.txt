@@ -34,7 +34,17 @@ Effigy
 - Added a GUI texture at assets/cgt_mod/textures/gui/effigy.png.
 - Updated the Effigy screen to render the texture with the textured GUI shader
   and correct texture dimensions.
-- Removed all Effigy versions except the Empty Effigy.
+
+Jar
+---
+
+- Added a one-slot GUI that accepts stackable items.
+- Stored items persist in the Jar and drop when the Jar is broken.
+- Made the Jar glass transparent and render its stored item inside.
+- Jar contents now rotate to face the viewer.
+- Lowered the rendered Jar contents by 0.2, then raised them by 0.1.
+
+
 
 Creative Tab
 ------------
@@ -44,9 +54,13 @@ Creative Tab
 
   Item Changes
   ----------------
+  
+- Renamed Zombie Head Jar to Jar and made it a placeable block.
+- Added Pillager,Villager,Zombie,Corpse
+- Added Player, Pillager, Villager, Zombie, and Skeleton Head Pots.
 - Removed Wedding Ring.
 - Removed Diamond Fragment.
-- Added Pillager,Villager,Zombie,Corpse
+- Removed all Effigy versions except the Empty Effigy.
 
 Wandering Trader
 ----------------

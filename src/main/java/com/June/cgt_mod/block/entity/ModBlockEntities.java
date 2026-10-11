@@ -16,6 +16,17 @@ public class ModBlockEntities {
 			"effigy_empty", () -> BlockEntityType.Builder.of(EffigyBlockEntity::new,
 					ModBlocks.EFFIGY_EMPTY_BLOCK.get()).build(null));
 
+	public static final RegistryObject<BlockEntityType<PlayerHeadPotBlockEntity>> PLAYER_HEAD_POT = BLOCK_ENTITIES.register(
+			"player_head_pot", () -> BlockEntityType.Builder.of(PlayerHeadPotBlockEntity::new,
+					ModBlocks.PLAYER_HEAD_POT.get(),
+					ModBlocks.PILLAGER_HEAD_POT.get(),
+					ModBlocks.VILLAGER_HEAD_POT.get(),
+					ModBlocks.ZOMBIE_HEAD_POT.get(),
+					ModBlocks.SKELETON_HEAD_POT.get()).build(null));
+
+	public static final RegistryObject<BlockEntityType<JarBlockEntity>> JAR = BLOCK_ENTITIES.register(
+			"jar", () -> BlockEntityType.Builder.of(JarBlockEntity::new, ModBlocks.JAR.get()).build(null));
+
 	public static void register(IEventBus eventBus) {
 		BLOCK_ENTITIES.register(eventBus);
 	}
