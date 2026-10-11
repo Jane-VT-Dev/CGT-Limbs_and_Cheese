@@ -3,7 +3,9 @@ Project Changes
 
 Cursed Bibles
 -------------
-- Added item models and matching texture copies for Cursed Bible I,II, III, and IV.
+- Added item models for Cursed Bibles I, II, III, and IV.
+- Added matching texture assets for Cursed Bibles I, II, III, and IV.
+- Cursed Bibles use the custom CGT TAB.
 
 Sheep Milking
 -------------
@@ -14,22 +16,27 @@ Sheep Milking
   - A bucket to receive Sheep Milk Bucket.
   - A basket to receive Sheep Milk Basket.
 
-Effigy Overhaul
-----------
-- Added a GUI mechanic and texture at assets/cgt_mod/textures/gui/effigy.png.
-- Changed the title and inventory text to Minecraft's conventional GUI text color.
-- Removed all Effigy version except Empty Effigy.
+Effigy
+------
+- Added a GUI texture at assets/cgt_mod/textures/gui/effigy.png.
+- Updated the Effigy screen to render the texture with the textured GUI shader
+  and correct texture dimensions.
+- Changed the title and inventory label to Minecraft's conventional GUI text
+  color.
+- Removed all Effigy versions except the Empty Effigy.
 
-Item Changes
+Creative Tab
 ------------
+- Changed the CGT TAB icon to cycle through the Pillager, Player, Skeleton,
+  Villager, and Zombie heads on sticks.
+
 - Removed Wedding Ring.
 - Removed Diamond Fragment.
 
 Wandering Trader
 ----------------
-- Each wandering trader has a 5% chance to receive one additional highshroom
-  trade offer. The selected item is randomly chosen from the four highshroom
-  variants.
-- The offer costs a random 1 to 5 emeralds for one highshroom.
-- The roll is stored on the trader to prevent rerolls or duplicate offers
-  when the trader is reloaded.
+- Each wandering trader has a 5% chance to receive an extra trade offer for
+  one randomly selected highshroom variant.
+- The offer gives one highshroom for a random cost of 1 to 5 emeralds.
+- The chance is rolled once per trader and saved to prevent rerolls or
+  duplicate offers when the trader is reloaded.
