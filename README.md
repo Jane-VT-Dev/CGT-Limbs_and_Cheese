@@ -8,7 +8,7 @@ You Are free to use this mod in your modpack, as long as it stays within Cursefo
 This Mod is only available on my GitHub,Curseforge and Modrinth.
 ====================================================================================================================================================
 Dependencies for this mod are:
-Farmer's Delight
+Farmer's Delight, \n\n
 Alex's mobs
 ====================================================================================================================================================
 I recommend to use a recipe look up mod like JEI/REI/EMI.
