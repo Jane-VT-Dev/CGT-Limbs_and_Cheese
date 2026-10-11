@@ -8,11 +8,20 @@ import com.June.cgt_mod.client.EffigyScreen;
 import com.June.cgt_mod.menu.ModMenus;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.npc.WanderingTrader;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -55,13 +64,69 @@ public class Cgt_mod {
 
 
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    // use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    @SubscribeEvent
+    public void onSheepInteract(PlayerInteractEvent.EntityInteract event) {
+        if (!(event.getTarget() instanceof Sheep sheep) || sheep.isBaby()) {
+            return;
+        }
+
+        ItemStack heldItem = event.getItemStack();
+        ItemStack milk;
+        if (heldItem.is(Items.GLASS_BOTTLE)) {
+            milk = new ItemStack(ModItems.SHEEP_MILK.get());
+        } else if (heldItem.is(Items.BOWL)) {
+            milk = new ItemStack(ModItems.SHEEP_MILK_BOWL.get());
+        } else if (heldItem.is(Items.BUCKET)) {
+            milk = new ItemStack(ModItems.SHEEP_MILK_BUCKET.get());
+        } else if (heldItem.is(ModItems.BASKET.get())) {
+            milk = new ItemStack(ModItems.SHEEP_MILK_BASKET.get());
+        } else {
+            return;
+        }
+
+        event.setCanceled(true);
+        event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+
+        if (!event.getLevel().isClientSide) {
+            event.getEntity().setItemInHand(event.getHand(),
+                    ItemUtils.createFilledResult(heldItem, event.getEntity(), milk));
+        }
+    }
+
+    @SubscribeEvent
+    public void onWandererJoin(EntityJoinLevelEvent event) {
+        if (event.getLevel().isClientSide()
+                || !(event.getEntity() instanceof WanderingTrader trader)) {
+            return;
+        }
+
+        String tradeCheckTag = "cgt_mod:highshroom_trade_checked";
+        if (trader.getPersistentData().getBoolean(tradeCheckTag)) {
+            return;
+        }
+        trader.getPersistentData().putBoolean(tradeCheckTag, true);
+
+        if (trader.getRandom().nextFloat() >= 0.05F) {
+            return;
+        }
+
+        ItemStack highshroom = switch (trader.getRandom().nextInt(4)) {
+            case 0 -> new ItemStack(ModItems.HIGHSHROOM.get());
+            case 1 -> new ItemStack(ModItems.IEIUNIUM_HIGHSHROOM.get());
+            case 2 -> new ItemStack(ModItems.FORTIS_HIGHSHROOM.get());
+            default -> new ItemStack(ModItems.GLOWIUS_HIGHSHROOM.get());
+        };
+        ItemStack emeraldCost = new ItemStack(Items.EMERALD, trader.getRandom().nextInt(5) + 1);
+        trader.getOffers().add(new MerchantOffer(emeraldCost, highshroom, 12, 5, 0.05F));
+    }
+
+    // use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
 

@@ -1,12 +1,20 @@
 package com.June.cgt_mod.client;
 
 import com.June.cgt_mod.menu.EffigyMenu;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.resources.ResourceLocation;
 
 public class EffigyScreen extends AbstractContainerScreen<EffigyMenu> {
+	private static final ResourceLocation TEXTURE =
+			new ResourceLocation("cgt_mod", "textures/gui/effigy.png");
+	private static final int TEXTURE_WIDTH = 256;
+	private static final int TEXTURE_HEIGHT = 256;
+
 	public EffigyScreen(EffigyMenu menu, Inventory inventory, Component title) {
 		super(menu, inventory, title);
 		imageWidth = 176;
@@ -15,15 +23,10 @@ public class EffigyScreen extends AbstractContainerScreen<EffigyMenu> {
 
 	@Override
 	protected void renderBg(PoseStack poseStack, float partialTick, int mouseX, int mouseY) {
-		fill(poseStack, leftPos, topPos, leftPos + imageWidth, topPos + imageHeight, 0xFF292522);
-		fill(poseStack, leftPos + 5, topPos + 5, leftPos + imageWidth - 5, topPos + 77, 0xFF51483D);
-		fill(poseStack, leftPos + 5, topPos + 80, leftPos + imageWidth - 5, topPos + imageHeight - 5, 0xFF3B3834);
-		for (int[] slot : new int[][]{{25, 47}, {80, 18}, {135, 47}}) {
-			fill(poseStack, leftPos + slot[0] - 1, topPos + slot[1] - 1,
-					leftPos + slot[0] + 17, topPos + slot[1] + 17, 0xFF181715);
-			fill(poseStack, leftPos + slot[0], topPos + slot[1],
-					leftPos + slot[0] + 16, topPos + slot[1] + 16, 0xFF756A5C);
-		}
+		RenderSystem.setShader(GameRenderer::getPositionTexShader);
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		RenderSystem.setShaderTexture(0, TEXTURE);
+		blit(poseStack, leftPos, topPos, 0, 0, imageWidth, imageHeight, TEXTURE_WIDTH, TEXTURE_HEIGHT);
 	}
 
 	@Override
@@ -35,7 +38,7 @@ public class EffigyScreen extends AbstractContainerScreen<EffigyMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		font.draw(poseStack, title, 8, 6, 0xFFE6D9C4);
-		font.draw(poseStack, Component.translatable("container.inventory"), 8, 72, 0xFFE6D9C4);
+		font.draw(poseStack, title, 8, 6, 0x404040);
+		font.draw(poseStack, Component.translatable("container.inventory"), 8, 72, 0x404040);
 	}
 }

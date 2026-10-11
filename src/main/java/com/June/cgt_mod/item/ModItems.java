@@ -29,11 +29,6 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> WEDDING_RING = ITEMS.register("wedding_ring",() -> new Item(new Item.Properties()
-            .stacksTo(1)
-            .tab(ModCreativeTab.instance)
-    ));
-
     public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(4)
@@ -447,10 +442,6 @@ public class ModItems {
     ));
 
 
-    public static final RegistryObject<Item> DIAMOND_FRAGMENT = ITEMS.register("diamond_fragment",() -> new Item(new Item.Properties()
-            .tab(ModCreativeTab.instance)
-    ));
-
     public static final RegistryObject<Item> TORN_PAGE = ITEMS.register("torn_page",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
     ));
@@ -587,7 +578,7 @@ public class ModItems {
     }
 
     private static Item.Properties bookProps() {
-        return new Item.Properties().tab(ModCreativeTab.TAB_MISC).stacksTo(1);
+        return new Item.Properties().tab(ModCreativeTab.instance).stacksTo(1);
     }
 
     public static void register(IEventBus eventBus){

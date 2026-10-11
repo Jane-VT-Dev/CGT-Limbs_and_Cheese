@@ -1,0 +1,35 @@
+Project Changes
+===============
+
+Cursed Bibles
+-------------
+- Added item models and matching texture copies for Cursed Bible I,II, III, and IV.
+
+Sheep Milking
+-------------
+- Removed Sheep Milk from sheep death drops.
+- Adult sheep can be milked by right-clicking with:
+  - A glass bottle to receive Sheep Milk.
+  - A bowl to receive Sheep Milk Bowl.
+  - A bucket to receive Sheep Milk Bucket.
+  - A basket to receive Sheep Milk Basket.
+
+Effigy Overhaul
+----------
+- Added a GUI mechanic and texture at assets/cgt_mod/textures/gui/effigy.png.
+- Changed the title and inventory text to Minecraft's conventional GUI text color.
+- Removed all Effigy version except Empty Effigy.
+
+Item Changes
+------------
+- Removed Wedding Ring.
+- Removed Diamond Fragment.
+
+Wandering Trader
+----------------
+- Each wandering trader has a 5% chance to receive one additional highshroom
+  trade offer. The selected item is randomly chosen from the four highshroom
+  variants.
+- The offer costs a random 1 to 5 emeralds for one highshroom.
+- The roll is stored on the trader to prevent rerolls or duplicate offers
+  when the trader is reloaded.

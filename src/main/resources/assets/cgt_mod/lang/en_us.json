@@ -3,7 +3,6 @@
   "item.cgt_mod.little_stone": "Little Stone",
 
   "block.cgt_mod.effigy_block": "Effigy",
-  "item.cgt_mod.wedding_ring": "Wedding Ring",
   "item.cgt_mod.guts": "Guts",
   "item.cgt_mod.human_flesh": "Human Flesh",
   "item.cgt_mod.little_rock": "Little Rock",
@@ -96,9 +95,7 @@
 
   "item.cgt_mod.torn_page": "Torn Page",
 
-  "item.cgt_mod.human_leather": "Human Leather",
-
-  "item.cgt_mod.diamond_fragment": "Diamond Fragment"
+  "item.cgt_mod.human_leather": "Human Leather"
 
 
 }
