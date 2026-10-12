@@ -32,7 +32,7 @@ public class JarMenu extends AbstractContainerMenu {
         this.access = ContainerLevelAccess.create(jar.getLevel(), jar.getBlockPos());
         jar.startOpen(playerInventory.player);
 
-        addSlot(new StackableSlot(jar, 0, 80, 18));
+        addSlot(new Slot(jar, 0, 80, 18));
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 9; column++) {
                 addSlot(new Slot(playerInventory, column + row * 9 + 9, 8 + column * 18, 84 + row * 18));
@@ -59,7 +59,7 @@ public class JarMenu extends AbstractContainerMenu {
                 if (!moveItemStackTo(stack, 1, slots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!JarBlockEntity.canStore(stack) || !moveItemStackTo(stack, 0, 1, false)) {
+            } else if (!moveItemStackTo(stack, 0, 1, false)) {
                 return ItemStack.EMPTY;
             }
 
@@ -79,14 +79,4 @@ public class JarMenu extends AbstractContainerMenu {
         jar.stopOpen(player);
     }
 
-    private static class StackableSlot extends Slot {
-        private StackableSlot(Container container, int index, int x, int y) {
-            super(container, index, x, y);
-        }
-
-        @Override
-        public boolean mayPlace(ItemStack stack) {
-            return JarBlockEntity.canStore(stack);
-        }
-    }
 }

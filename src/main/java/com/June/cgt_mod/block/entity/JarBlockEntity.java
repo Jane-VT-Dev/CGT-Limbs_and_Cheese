@@ -64,10 +64,6 @@ public class JarBlockEntity extends BlockEntity implements Container, MenuProvid
 
     @Override
     public void setItem(int slot, ItemStack stack) {
-        if (!stack.isEmpty() && !canStore(stack)) {
-            return;
-        }
-
         ItemStack stored = stack.copy();
         if (!stored.isEmpty()) {
             stored.setCount(Math.min(stored.getCount(), Math.min(getMaxStackSize(), stored.getMaxStackSize())));
@@ -79,10 +75,6 @@ public class JarBlockEntity extends BlockEntity implements Container, MenuProvid
     @Override
     public int getMaxStackSize() {
         return 64;
-    }
-
-    public static boolean canStore(ItemStack stack) {
-        return stack.getMaxStackSize() > 1;
     }
 
     @Override

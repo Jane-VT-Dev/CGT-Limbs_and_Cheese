@@ -27,7 +27,7 @@ public class EffigyBlockEntityRenderer implements BlockEntityRenderer<EffigyBloc
 		}
 		facing = facing.getOpposite();
 		Direction right = facing.getClockWise();
-		double[][] offsets = {{-0.50, 1.20}, {0.0, 1.75}, {0.50, 1.20}};
+		double[][] offsets = {{-0.5625, 1.1375}, {-0.0375, 1.75}, {0.50, 1.20}};
 
 		for (int slot = 0; slot < offsets.length; slot++) {
 			ItemStack stack = effigy.getItem(slot);
@@ -38,10 +38,14 @@ public class EffigyBlockEntityRenderer implements BlockEntityRenderer<EffigyBloc
 			double side = offsets[slot][0];
 			double forward = stack.is(ModItems.PILLAGER_HEAD.get()) || stack.is(ModItems.VILLAGER_HEAD.get())
 					? -1.0 / 16.0 : 0.0;
+			forward += 2.0 / 16.0;
 			poseStack.pushPose();
 			poseStack.translate(0.5 + right.getStepX() * side + facing.getStepX() * forward,
 					offsets[slot][1], 0.5 + right.getStepZ() * side + facing.getStepZ() * forward);
 			poseStack.mulPose(Vector3f.YP.rotationDegrees(facing.toYRot()));
+			if (stack.is(ModItems.PILLAGER_HEAD.get()) || stack.is(ModItems.VILLAGER_HEAD.get())) {
+				poseStack.mulPose(Vector3f.YP.rotationDegrees(180.0F));
+			}
 			poseStack.scale(0.8F, 0.8F, 0.8F);
 			Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemTransforms.TransformType.FIXED,
 					packedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, 0);
