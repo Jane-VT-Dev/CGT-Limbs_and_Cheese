@@ -3,16 +3,8 @@ package com.June.cgt_mod;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.item.ModItems;
-import com.June.cgt_mod.client.EffigyBlockEntityRenderer;
-import com.June.cgt_mod.client.PlayerHeadPotRenderer;
-import com.June.cgt_mod.client.EffigyScreen;
-import com.June.cgt_mod.client.JarScreen;
-import com.June.cgt_mod.client.JarBlockEntityRenderer;
 import com.June.cgt_mod.menu.ModMenus;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.npc.WanderingTrader;
@@ -20,19 +12,15 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -132,25 +120,4 @@ public class Cgt_mod {
         trader.getOffers().add(new MerchantOffer(emeraldCost, highshroom, 12, 5, 0.05F));
     }
 
-    // use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            event.enqueueWork(() -> {
-                MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new);
-                MenuScreens.register(ModMenus.JAR_MENU.get(), JarScreen::new);
-                ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
-            });
-        }
-
-        @SubscribeEvent
-        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer(ModBlockEntities.EFFIGY_EMPTY.get(), EffigyBlockEntityRenderer::new);
-            event.registerBlockEntityRenderer(ModBlockEntities.PLAYER_HEAD_POT.get(), PlayerHeadPotRenderer::new);
-            event.registerBlockEntityRenderer(ModBlockEntities.JAR.get(), JarBlockEntityRenderer::new);
-        }
-
-    }
 }

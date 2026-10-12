@@ -1,7 +1,6 @@
 package com.June.cgt_mod.item;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.inventory.BookViewScreen;
+import com.June.cgt_mod.client.ClientBookOpener;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -26,22 +25,8 @@ public class LoreBookItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (level.isClientSide()) {
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> openBook(pages));
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientBookOpener.openBook(pages));
         }
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
-    }
-
-    private static void openBook(List<FormattedText> pages) {
-        Minecraft.getInstance().setScreen(new BookViewScreen(new BookViewScreen.BookAccess() {
-            @Override
-            public int getPageCount() {
-                return pages.size();
-            }
-
-            @Override
-            public FormattedText getPageRaw(int index) {
-                return pages.get(index);
-            }
-        }));
     }
 }
