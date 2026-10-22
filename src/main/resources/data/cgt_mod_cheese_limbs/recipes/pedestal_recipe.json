@@ -1,0 +1,21 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "BBB",
+    " C ",
+    "BBB"
+  ],
+  "key":{
+    "B":{
+      "item":"minecraft:polished_blackstone_bricks"
+    },
+    "C":{
+      "item":"minecraft:diamond"
+    }
+
+  },
+  "result":{
+    "item":"cgt_mod_cheese_limbs:pedestal",
+    "count":1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " C ",
+    "BAB",
+    "BBB"
+  ],
+  "key":{
+    "A":{
+      "item":"cgt_mod_cheese_limbs:Bucket_of_Blood"
+    },
+    "B":{
+      "item":"minecraft:polished_blackstone_bricks"
+    },
+    "C":{
+      "item":"minecraft:diamond"
+    }
+
+  },
+  "result":{
+    "item":"cgt_mod_cheese_limbs:blood_altar",
+    "count":1
+  }
+}

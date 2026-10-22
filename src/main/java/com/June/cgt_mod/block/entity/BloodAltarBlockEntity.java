@@ -2,6 +2,7 @@ package com.June.cgt_mod.block.entity;
 
 import com.June.cgt_mod.fluid.ModFluids;
 import com.June.cgt_mod.block.custom.BloodAltarBlock;
+import com.June.cgt_mod.config.BloodAltarConfig;
 import com.June.cgt_mod.menu.BloodAltarMenu;
 import com.June.cgt_mod.recipe.BloodAltarRecipe;
 import net.minecraft.core.BlockPos;
@@ -35,7 +36,6 @@ import net.minecraftforge.fluids.capability.templates.FluidTank;
 import org.jetbrains.annotations.Nullable;
 
 public class BloodAltarBlockEntity extends BlockEntity implements Container, MenuProvider {
-    public static final int FLUID_CAPACITY = 10_000;
     private static final int INPUT_SLOT = 0;
     private static final int OUTPUT_SLOT = 1;
     private static final Direction[] PEDESTAL_ORDER = {
@@ -43,7 +43,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
     };
 
     private final NonNullList<ItemStack> items = NonNullList.withSize(2, ItemStack.EMPTY);
-    private final FluidTank bloodTank = new FluidTank(FLUID_CAPACITY,
+    private final FluidTank bloodTank = new FluidTank(BloodAltarConfig.TANK_CAPACITY.get(),
             fluid -> fluid.getFluid() == ModFluids.BLOOD.get()) {
         @Override
         protected void onContentsChanged() {
@@ -132,7 +132,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
     }
 
     public int getCapacity() {
-        return FLUID_CAPACITY;
+        return BloodAltarConfig.TANK_CAPACITY.get();
     }
 
     public ItemStack[] getPedestalItems() {

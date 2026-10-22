@@ -4,6 +4,7 @@ import com.June.cgt_mod.config.EffigyConfig;
 import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.config.JarConfig;
 import com.June.cgt_mod.config.HeadPlantPotConfig;
+import com.June.cgt_mod.config.BloodAltarConfig;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.fluid.ModFluids;
@@ -56,6 +57,8 @@ public class Cgt_mod {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, HeadPlantPotConfig.SPEC,
                 "cgt_mod_cheese_limbs-head-plant-pots.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConsumableConfig.SPEC, "cgt_mod_cheese_limbs-consumables.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BloodAltarConfig.SPEC,
+                "cgt_mod_cheese_limbs-blood-altar.toml");
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

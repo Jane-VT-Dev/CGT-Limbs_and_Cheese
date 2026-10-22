@@ -71,6 +71,8 @@
   "block.cgt_mod_cheese_limbs.blood_blob": "Blood Blob",
   "container.cgt_mod.effigy": "Effigy",
   "container.cgt_mod.blood_altar": "Blood Altar",
+  "recipe.cgt_mod_cheese_limbs.blood_altar.blood": "Blood: %s mB",
+  "recipe.cgt_mod_cheese_limbs.blood_altar.duration": "Duration: %s s",
 
   "block.cgt_mod_cheese_limbs.jar": "Jar",
   "container.cgt_mod.jar": "Jar",

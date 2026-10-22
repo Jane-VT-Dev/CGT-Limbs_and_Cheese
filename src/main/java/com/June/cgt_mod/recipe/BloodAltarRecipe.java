@@ -2,6 +2,7 @@ package com.June.cgt_mod.recipe;
 
 import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.block.entity.BloodAltarBlockEntity;
+import com.June.cgt_mod.config.BloodAltarConfig;
 import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
@@ -155,8 +156,9 @@ public class BloodAltarRecipe implements Recipe<Container> {
                 pedestals.set(i, Ingredient.fromJson(pedestalJson.get(i)));
             }
             int bloodAmount = net.minecraft.util.GsonHelper.getAsInt(json, "blood", 0);
-            if (bloodAmount <= 0 || bloodAmount > BloodAltarBlockEntity.FLUID_CAPACITY) {
-                throw new com.google.gson.JsonSyntaxException("Blood altar recipe blood amount must be between 1 and 10000 mB");
+            if (bloodAmount <= 0 || bloodAmount > BloodAltarConfig.TANK_CAPACITY.get()) {
+                throw new com.google.gson.JsonSyntaxException("Blood altar recipe blood amount must be between 1 and "
+                        + BloodAltarConfig.TANK_CAPACITY.get() + " mB");
             }
             int duration = net.minecraft.util.GsonHelper.getAsInt(json, "duration", 0);
             if (duration <= 0) {

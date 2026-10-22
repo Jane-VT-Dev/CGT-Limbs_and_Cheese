@@ -11,10 +11,10 @@
       "item": "cgt_mod_cheese_limbs:guts"
     },
     {
-      "item": "minecraft:villager_skull"
+      "item": "cgt_mod_cheese_limbs:villager_head"
     },
     {
-      "item": "cgt_mod_cheese_limbs:pillager_skull"
+      "item": "cgt_mod_cheese_limbs:pillager_head"
     }
   ],
   "blood": 10000,

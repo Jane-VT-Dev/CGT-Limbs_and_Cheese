@@ -1,6 +1,6 @@
 package com.June.cgt_mod.client;
 
-import com.June.cgt_mod.block.entity.BloodAltarBlockEntity;
+import com.June.cgt_mod.config.BloodAltarConfig;
 import com.June.cgt_mod.menu.BloodAltarMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -41,7 +41,7 @@ public class BloodAltarScreen extends AbstractContainerScreen<BloodAltarMenu> {
         int tankLeft = leftPos + TANK_X;
         int tankTop = topPos + TANK_Y;
         int fluidHeight = Math.min(TANK_HEIGHT,
-                menu.getFluidAmount() * TANK_HEIGHT / BloodAltarBlockEntity.FLUID_CAPACITY);
+                (int) ((long) menu.getFluidAmount() * TANK_HEIGHT / BloodAltarConfig.TANK_CAPACITY.get()));
         if (fluidHeight > 0) {
             fill(poseStack, tankLeft + 1, tankTop + TANK_HEIGHT - fluidHeight,
                     tankLeft + TANK_WIDTH - 1, tankTop + TANK_HEIGHT - 1, 0xFF981B24);
@@ -68,7 +68,7 @@ public class BloodAltarScreen extends AbstractContainerScreen<BloodAltarMenu> {
             renderTooltip(poseStack, List.of(
                     Component.literal("Blood").getVisualOrderText(),
                     Component.literal(menu.getFluidAmount() + " / "
-                            + BloodAltarBlockEntity.FLUID_CAPACITY + " mB").getVisualOrderText()), mouseX, mouseY);
+                            + BloodAltarConfig.TANK_CAPACITY.get() + " mB").getVisualOrderText()), mouseX, mouseY);
         }
     }
 
