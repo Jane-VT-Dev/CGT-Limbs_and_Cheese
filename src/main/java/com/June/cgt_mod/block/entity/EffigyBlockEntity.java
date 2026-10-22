@@ -1,5 +1,6 @@
 package com.June.cgt_mod.block.entity;
 
+import com.June.cgt_mod.config.EffigyConfig;
 import com.June.cgt_mod.menu.EffigyMenu;
 import com.June.cgt_mod.item.ModItems;
 import net.minecraft.core.BlockPos;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SkullBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.ContainerHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class EffigyBlockEntity extends BlockEntity implements Container, MenuProvider {
 	private static final int SLOT_COUNT = 3;
@@ -68,7 +70,7 @@ public class EffigyBlockEntity extends BlockEntity implements Container, MenuPro
 
 	@Override
 	public void setItem(int slot, ItemStack stack) {
-		if (!stack.isEmpty() && !isHeadItem(stack)) {
+		if (!stack.isEmpty() && !isAllowedHeadItem(stack)) {
 			return;
 		}
 		ItemStack stored = stack.copy();
@@ -81,6 +83,11 @@ public class EffigyBlockEntity extends BlockEntity implements Container, MenuPro
 		return stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof SkullBlock
 				|| stack.is(ModItems.PILLAGER_HEAD.get())
 				|| stack.is(ModItems.VILLAGER_HEAD.get());
+	}
+
+	public static boolean isAllowedHeadItem(ItemStack stack) {
+		return isHeadItem(stack)
+				&& EffigyConfig.allowsHead(ForgeRegistries.ITEMS.getKey(stack.getItem()).toString());
 	}
 
 	@Override

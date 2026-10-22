@@ -1,5 +1,6 @@
 package com.June.cgt_mod;
 
+import com.June.cgt_mod.config.EffigyConfig;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.item.ModItems;
@@ -18,6 +19,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -37,6 +40,8 @@ public class Cgt_mod {
 
     public Cgt_mod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EffigyConfig.SPEC);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

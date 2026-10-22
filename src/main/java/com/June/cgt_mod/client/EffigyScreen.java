@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class EffigyScreen extends AbstractContainerScreen<EffigyMenu> {
 	private static final ResourceLocation TEXTURE =
-			new ResourceLocation("cgt_mod", "textures/gui/effigy.png");
+			new ResourceLocation("cgt_mod_cheese_limbs", "textures/gui/effigy.png");
 	private static final int TEXTURE_WIDTH = 256;
 	private static final int TEXTURE_HEIGHT = 256;
 

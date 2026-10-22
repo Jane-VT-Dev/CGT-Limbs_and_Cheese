@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class JarScreen extends AbstractContainerScreen<JarMenu> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("cgt_mod", "textures/gui/jar.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("cgt_mod_cheese_limbs", "textures/gui/jar.png");
     private static final int TEXTURE_WIDTH = 256;
     private static final int TEXTURE_HEIGHT = 256;
 

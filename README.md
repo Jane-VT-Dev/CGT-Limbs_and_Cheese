@@ -12,3 +12,6 @@ Farmer's Delight,
 Alex's mobs
 ====================================================================================================================================================
 I recommend to use a recipe look up mod like JEI/REI/EMI.
+
+Effigy head filters:
+The common config file `config/cgt_mod_cheese_limbs-common.toml` contains `head_whitelist` and `head_blacklist` lists. Add item IDs such as `"minecraft:player_head"` or `"cgt_mod_cheese_limbs:pillager_head"` to either list. An empty whitelist allows all heads; a non-empty whitelist allows only listed heads. The blacklist always takes precedence. Restart the game or reload the config after editing.

@@ -64,7 +64,7 @@ public class EffigyMenu extends AbstractContainerMenu {
 					return ItemStack.EMPTY;
 				}
 			} else {
-				if (!EffigyBlockEntity.isHeadItem(stack) || !moveItemStackTo(stack, 0, 3, false)) {
+				if (!EffigyBlockEntity.isAllowedHeadItem(stack) || !moveItemStackTo(stack, 0, 3, false)) {
 					return ItemStack.EMPTY;
 				}
 			}
@@ -91,7 +91,7 @@ public class EffigyMenu extends AbstractContainerMenu {
 
 		@Override
 		public boolean mayPlace(ItemStack stack) {
-			return EffigyBlockEntity.isHeadItem(stack);
+			return EffigyBlockEntity.isAllowedHeadItem(stack);
 		}
 
 		@Override
