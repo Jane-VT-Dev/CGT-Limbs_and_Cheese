@@ -1,0 +1,45 @@
+{
+  "textures": {
+    "side": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_side",
+    "top": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_top",
+    "particle": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_side"
+  },
+  "elements": [
+    {
+      "from": [1, 0, 1],
+      "to": [15, 3, 15],
+      "faces": {
+        "north": {"texture": "#side"},
+        "south": {"texture": "#side"},
+        "east": {"texture": "#side"},
+        "west": {"texture": "#side"},
+        "up": {"texture": "#top"},
+        "down": {"texture": "#side"}
+      }
+    },
+    {
+      "from": [4, 3, 4],
+      "to": [12, 12, 12],
+      "faces": {
+        "north": {"texture": "#side"},
+        "south": {"texture": "#side"},
+        "east": {"texture": "#side"},
+        "west": {"texture": "#side"},
+        "up": {"texture": "#top"},
+        "down": {"texture": "#side"}
+      }
+    },
+    {
+      "from": [0, 12, 0],
+      "to": [16, 14, 16],
+      "faces": {
+        "north": {"texture": "#side"},
+        "south": {"texture": "#side"},
+        "east": {"texture": "#side"},
+        "west": {"texture": "#side"},
+        "up": {"texture": "#top"},
+        "down": {"texture": "#side"}
+      }
+    }
+  ]
+}

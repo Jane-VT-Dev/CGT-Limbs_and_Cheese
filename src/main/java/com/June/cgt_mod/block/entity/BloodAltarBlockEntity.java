@@ -151,20 +151,12 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
     }
 
     public void onPedestalChanged() {
-        updateMultiblockState();
         setChanged();
     }
 
-    private void updateMultiblockState() {
+    private void updateActiveState(boolean active) {
         if (level == null || level.isClientSide) {
             return;
-        }
-        boolean active = true;
-        for (Direction direction : PEDESTAL_ORDER) {
-            if (!(level.getBlockEntity(worldPosition.relative(direction, 2)) instanceof PedestalBlockEntity)) {
-                active = false;
-                break;
-            }
         }
         BlockState state = getBlockState();
         if (state.hasProperty(BloodAltarBlock.ACTIVE) && state.getValue(BloodAltarBlock.ACTIVE) != active) {
@@ -210,6 +202,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
         pendingOutput = output;
         craftProgress = 0;
         craftDuration = recipe.getDuration();
+        updateActiveState(true);
         strikeLightning(level, worldPosition);
         setChanged();
         return true;
@@ -222,6 +215,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
         pendingOutput = ItemStack.EMPTY;
         craftProgress = 0;
         craftDuration = 0;
+        updateActiveState(false);
         level.playSound(null, worldPosition, SoundEvents.ANVIL_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         setChanged();
     }
@@ -246,7 +240,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
         if (!(level instanceof ServerLevel serverLevel)) {
             return;
         }
-        altar.updateMultiblockState();
+        altar.updateActiveState(altar.isCrafting());
         if (!altar.isCrafting()) {
             return;
         }
@@ -268,6 +262,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
             altar.pendingOutput = ItemStack.EMPTY;
             altar.craftProgress = 0;
             altar.craftDuration = 0;
+            altar.updateActiveState(false);
             for (Direction direction : PEDESTAL_ORDER) {
                 BlockEntity blockEntity = level.getBlockEntity(pos.relative(direction, 2));
                 if (blockEntity instanceof PedestalBlockEntity pedestal) {
@@ -343,6 +338,7 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
+        items.replaceAll(stack -> ItemStack.EMPTY);
         ContainerHelper.loadAllItems(tag, items);
         bloodTank.readFromNBT(tag.getCompound("BloodTank"));
         craftProgress = tag.getInt("CraftProgress");
@@ -379,6 +375,9 @@ public class BloodAltarBlockEntity extends BlockEntity implements Container, Men
         CompoundTag tag = packet.getTag();
         if (tag != null) {
             load(tag);
+            if (level != null) {
+                level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+            }
         }
     }
 

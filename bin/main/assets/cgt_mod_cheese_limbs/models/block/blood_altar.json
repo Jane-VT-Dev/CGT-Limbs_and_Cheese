@@ -1,0 +1,36 @@
+{
+	"format_version": "26.3",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "cgt_mod_cheese_limbs:blocks/blood_altar/blood_altar_side_inactive",
+		"side": "cgt_mod_cheese_limbs:blocks/blood_altar/blood_altar_side_inactive",
+		"top": "cgt_mod_cheese_limbs:blocks/blood_altar/blood_altar_top_inactive"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 11, 16],
+			"faces": {
+				"north": {"uv": [0, 5, 16, 16], "texture": "#side"},
+				"east": {"uv": [0, 5, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 5, 16, 16], "texture": "#side"},
+				"west": {"uv": [0, 5, 16, 16], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#side"}
+			}
+		},
+		{
+			"from": [-1, 11, -1],
+			"to": [17, 14, 17],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-1, 0, -1]},
+			"faces": {
+				"north": {"uv": [0, 2, 16, 5], "texture": "#side"},
+				"east": {"uv": [0, 2, 16, 5], "texture": "#side"},
+				"south": {"uv": [0, 2, 16, 5], "texture": "#side"},
+				"west": {"uv": [0, 2, 16, 5], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#side"}
+			}
+		}
+	]
+}

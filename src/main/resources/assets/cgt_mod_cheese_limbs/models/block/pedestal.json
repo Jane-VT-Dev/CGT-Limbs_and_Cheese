@@ -1,8 +1,8 @@
 {
   "textures": {
-    "side": "cgt_mod_cheese_limbs:blocks/pedestal_side",
-    "top": "cgt_mod_cheese_limbs:blocks/pedestal_top",
-    "particle": "cgt_mod_cheese_limbs:blocks/pedestal_side"
+    "side": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_side",
+    "top": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_top",
+    "particle": "cgt_mod_cheese_limbs:blocks/pedestal/pedestal_side"
   },
   "elements": [
     {
