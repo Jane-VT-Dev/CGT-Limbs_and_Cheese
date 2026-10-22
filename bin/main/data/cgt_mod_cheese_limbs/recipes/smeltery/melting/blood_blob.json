@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "tconstruct"
+        }
+      ],
+      "recipe": {
+        "type": "tconstruct:melting",
+        "ingredient": {
+          "item": "cgt_mod_cheese_limbs:blood_blob"
+        },
+        "result": {
+          "amount": 125,
+          "fluid": "cgt_mod_cheese_limbs:blood"
+        },
+        "temperature": 100,
+        "time": 14
+      }
+    }
+  ]
+}
