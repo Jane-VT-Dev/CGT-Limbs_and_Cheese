@@ -1,0 +1,25 @@
+{
+  "type": "cgt_mod_cheese_limbs:blood_altar",
+  "core": {
+    "item": "minecraft:iron_axe"
+  },
+  "pedestals": [
+    {
+      "item": "cgt_mod_cheese_limbs:guts"
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:guts"
+    },
+    {
+      "item": "minecraft:villager_skull"
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:pillager_skull"
+    }
+  ],
+  "blood": 10000,
+  "duration": 500,
+  "result": {
+    "item": "cgt_mod_cheese_limbs:butcher_knife"
+  }
+}

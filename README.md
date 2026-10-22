@@ -14,6 +14,15 @@ Alex's mobs
 I recommend to use a recipe look up mod like JEI/REI/EMI.
 
 
+
+
+
+
+
+
+
+
+
 ====================================================================================================================================================
 
 Blood altar recipes example:
