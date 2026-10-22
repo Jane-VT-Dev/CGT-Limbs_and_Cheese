@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "222"
+  ],
+  "key": {
+    "1": {
+      "item": "cgt_mod_cheese_limbs:stick_bundle"
+    },
+    "2": {
+      "item": "cgt_mod_cheese_limbs:little_stone"
+    }
+  },
+  "result": {
+    "item": "cgt_mod_cheese_limbs:effigy_empty_block",
+    "count": 1
+  }
+}

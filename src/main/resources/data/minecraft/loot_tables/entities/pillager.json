@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cgt_mod:pillager_head",
+          "name": "cgt_mod_cheese_limbs:pillager_head",
           "weight": 10,
           "functions": [
             {
@@ -25,7 +25,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cgt_mod:pillager_corpse",
+          "name": "cgt_mod_cheese_limbs:pillager_corpse",
           "weight": 1,
           "functions": [
             {

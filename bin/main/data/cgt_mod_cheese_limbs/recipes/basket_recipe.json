@@ -1,0 +1,17 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    "A A",
+    " A ",
+    "   "
+  ],
+  "key":{
+    "A":{
+      "item":"minecraft:wheat"
+    }
+  },
+  "result":{
+    "item":"cgt_mod_cheese_limbs:basket",
+    "count":1
+  }
+}

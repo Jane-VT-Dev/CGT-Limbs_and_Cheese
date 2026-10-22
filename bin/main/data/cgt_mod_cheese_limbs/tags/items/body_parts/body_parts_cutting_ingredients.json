@@ -1,0 +1,53 @@
+{
+  "values": [
+    {
+      "id": "cgt_mod_cheese_limbs:pillager_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:villager_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:player_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:villager_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:pillager_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:player_leg",
+      "required": false
+    },
+
+    {
+      "id": "cgt_mod_cheese_limbs:villager_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:pillager_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:player_torso",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:villager_head",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:pillager_head",
+      "required": false
+    },
+    {
+      "id": "minecraft:player_head",
+      "required": false
+    }
+  ]
+}

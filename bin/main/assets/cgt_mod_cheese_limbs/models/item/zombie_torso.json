@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cgt_mod_cheese_limbs:items/zombie_torso"
+  }
+
+}

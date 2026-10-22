@@ -25,7 +25,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "cgt_mod:player_corpse",
+          "name": "cgt_mod_cheese_limbs:player_corpse",
           "weight": 1,
           "functions": [
             {

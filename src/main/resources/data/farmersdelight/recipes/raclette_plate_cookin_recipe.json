@@ -7,7 +7,7 @@
       "tag": "forge:milk"
     },
     {
-      "item": "cgt_mod:raclette"
+      "item": "cgt_mod_cheese_limbs:raclette"
     },
     {
       "item": "minecraft:porkchop"
@@ -17,6 +17,6 @@
     }
   ],
   "result": {
-    "item": "cgt_mod:raclette_plate"
+    "item": "cgt_mod_cheese_limbs:raclette_plate"
   }
 }

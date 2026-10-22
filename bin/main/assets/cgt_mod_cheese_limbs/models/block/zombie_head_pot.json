@@ -1,0 +1,7 @@
+{
+  "parent": "cgt_mod_cheese_limbs:block/player_head_pot",
+  "textures": {
+    "0": "cgt_mod_cheese_limbs:blocks/zombie_head_pot",
+    "particle": "cgt_mod_cheese_limbs:blocks/zombie_head_pot"
+  }
+}

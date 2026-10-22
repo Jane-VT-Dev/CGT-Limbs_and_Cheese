@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod_cheese_limbs:player_leg"
+  },
+
+  "result":"cgt_mod_cheese_limbs:cooked_player_leg",
+
+  "experience":0.5,
+  "cookingtime":150
+}

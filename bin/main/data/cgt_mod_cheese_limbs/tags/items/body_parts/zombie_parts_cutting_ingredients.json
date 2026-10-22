@@ -1,0 +1,21 @@
+{
+  "values": [
+
+    {
+      "id": "cgt_mod_cheese_limbs:zombie_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:zombie_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod_cheese_limbs:zombie_torso",
+      "required": false
+    },
+    {
+      "id": "minecraft:zombie_head",
+      "required": false
+    }
+  ]
+}

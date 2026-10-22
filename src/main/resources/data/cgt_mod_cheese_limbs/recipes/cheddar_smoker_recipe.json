@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod_cheese_limbs:comte"
+  },
+
+  "result":"cgt_mod_cheese_limbs:cheddar",
+
+  "experience":0.5,
+  "cookingtime":150
+}

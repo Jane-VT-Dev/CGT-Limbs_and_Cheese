@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "tag": "cgt_mod:body_parts/skeleton_parts"
+      "tag": "cgt_mod_cheese_limbs:body_parts/skeleton_parts"
     }
   ],
   "tool": {

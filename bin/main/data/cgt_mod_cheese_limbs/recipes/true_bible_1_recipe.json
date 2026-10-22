@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod_cheese_limbs:torn_page"
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:torn_page"
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:torn_page"
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:human_leather"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod_cheese_limbs:true_bible_1",
+    "count": 1
+  }
+}

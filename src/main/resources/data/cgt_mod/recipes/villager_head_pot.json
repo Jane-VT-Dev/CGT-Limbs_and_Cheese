@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {"item": "cgt_mod:villager_head"},
-    {"item": "minecraft:flower_pot"}
-  ],
-  "result": {"item": "cgt_mod:villager_head_pot"}
-}

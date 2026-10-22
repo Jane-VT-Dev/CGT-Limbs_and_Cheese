@@ -2,7 +2,7 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "cgt_mod:zombie_corpse"
+      "item": "cgt_mod_cheese_limbs:zombie_corpse"
     }
   ],
   "tool": {
@@ -11,15 +11,15 @@
   },
   "result": [
     {
-      "item": "cgt_mod:zombie_torso",
+      "item": "cgt_mod_cheese_limbs:zombie_torso",
       "count": 1
     },
     {
-      "item": "cgt_mod:zombie_arm",
+      "item": "cgt_mod_cheese_limbs:zombie_arm",
       "count": 2
     },
     {
-      "item": "cgt_mod:zombie_leg",
+      "item": "cgt_mod_cheese_limbs:zombie_leg",
       "count": 2
     },
     {

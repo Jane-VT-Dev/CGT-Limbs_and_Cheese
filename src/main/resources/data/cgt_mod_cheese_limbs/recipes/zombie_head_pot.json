@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:zombie_head"},
+    {"item": "minecraft:flower_pot"}
+  ],
+  "result": {"item": "cgt_mod_cheese_limbs:zombie_head_pot"}
+}

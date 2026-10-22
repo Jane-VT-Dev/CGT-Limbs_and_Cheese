@@ -1,7 +1,0 @@
-{
-  "parent": "cgt_mod:block/player_head_pot",
-  "textures": {
-    "0": "cgt_mod:blocks/zombie_head_pot",
-    "particle": "cgt_mod:blocks/zombie_head_pot"
-  }
-}

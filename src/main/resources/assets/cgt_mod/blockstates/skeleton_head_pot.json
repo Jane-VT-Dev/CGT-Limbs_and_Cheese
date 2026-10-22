@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "cgt_mod:block/skeleton_head_pot"},
-    "facing=east": {"model": "cgt_mod:block/skeleton_head_pot", "y": 90},
-    "facing=south": {"model": "cgt_mod:block/skeleton_head_pot", "y": 180},
-    "facing=west": {"model": "cgt_mod:block/skeleton_head_pot", "y": 270}
-  }
-}

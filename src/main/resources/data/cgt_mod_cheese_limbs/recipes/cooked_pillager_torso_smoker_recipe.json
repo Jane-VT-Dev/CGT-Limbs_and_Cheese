@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod_cheese_limbs:pillager_torso"
+  },
+
+  "result":"cgt_mod_cheese_limbs:cooked_pillager_torso",
+
+  "experience":0.5,
+  "cookingtime":150
+}
