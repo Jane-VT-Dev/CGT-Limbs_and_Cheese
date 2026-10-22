@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:milk_basket"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:comte",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "21 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:snowball"
+    },
+    "2": {
+      "item": "cgt_mod:emmental"
+    }
+  },
+  "result": {
+    "item": "cgt_mod:tomme_du_jura",
+    "count": 1
+  }
+}

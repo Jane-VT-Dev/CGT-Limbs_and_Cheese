@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "cgt_mod:villager_corpse"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
+  },
+  "result": [
+    {
+      "item": "cgt_mod:villager_torso",
+      "count": 1
+    },
+    {
+      "item": "cgt_mod:villager_arm",
+      "count": 2
+    },
+    {
+      "item": "cgt_mod:villager_leg",
+      "count": 2
+    },
+    {
+      "item": "cgt_mod:villager_head",
+      "count": 1
+    }
+  ],
+  "sound": "minecraft:item.axe.strip"
+}

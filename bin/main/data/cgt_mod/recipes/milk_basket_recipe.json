@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:basket"
+    },
+    {
+      "item": "cgt_mod:basket"
+    },
+    {
+      "item": "cgt_mod:basket"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:milk_basket",
+    "count": 3
+  }
+}

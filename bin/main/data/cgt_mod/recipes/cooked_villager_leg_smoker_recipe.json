@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod:villager_leg"
+  },
+
+  "result":"cgt_mod:cooked_villager_leg",
+
+  "experience":0.5,
+  "cookingtime":150
+}

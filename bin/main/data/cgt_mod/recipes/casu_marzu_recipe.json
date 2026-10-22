@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:sheep_milk_bowl"
+    },
+    {
+      "item": "alexsmobs:maggot"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:casu_marzu",
+    "count": 1
+  }
+}

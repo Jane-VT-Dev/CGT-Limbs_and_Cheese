@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "21 "
+  ],
+  "key": {
+    "1": {
+      "item": "cgt_mod:milk_bowl"
+    },
+    "2": {
+      "item": "cgt_mod:camembert"
+    }
+  },
+  "result": {
+    "item": "cgt_mod:bria_savarin",
+    "count": 1
+  }
+}

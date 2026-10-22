@@ -1,0 +1,12 @@
+{
+  "type":"minecraft:smoking",
+  "ingredient":
+  {
+    "item":"cgt_mod:pillager_leg"
+  },
+
+  "result":"cgt_mod:cooked_pillager_leg",
+
+  "experience":0.5,
+  "cookingtime":150
+}

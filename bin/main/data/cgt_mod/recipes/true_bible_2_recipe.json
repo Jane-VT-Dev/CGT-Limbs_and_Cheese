@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cgt_mod:torn_page"
+    },
+    {
+      "item": "cgt_mod:torn_page"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "item": "cgt_mod:true_bible_1"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:true_bible_2",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "cgt_mod:body_parts/body_parts"
+    },
+    {
+      "tag": "cgt_mod:body_parts/body_parts"
+    },
+    {
+      "tag": "cgt_mod:body_parts/body_parts"
+    },
+    {
+      "tag": "cgt_mod:body_parts/body_parts"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:soup_de_cannibal"
+  }
+}

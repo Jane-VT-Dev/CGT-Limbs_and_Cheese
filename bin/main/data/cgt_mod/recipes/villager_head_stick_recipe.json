@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 2 "
+  ],
+  "key": {
+    "1": {
+      "item": "cgt_mod:villager_head"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "cgt_mod:villager_head_on_stick",
+    "count": 1
+  }
+}

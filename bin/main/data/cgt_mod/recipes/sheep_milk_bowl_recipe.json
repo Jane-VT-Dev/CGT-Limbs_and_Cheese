@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "cgt_mod:sheep_milk_bucket"
+    }
+  ],
+  "result": {
+    "item": "cgt_mod:sheep_milk_bowl",
+    "count": 3
+  }
+}

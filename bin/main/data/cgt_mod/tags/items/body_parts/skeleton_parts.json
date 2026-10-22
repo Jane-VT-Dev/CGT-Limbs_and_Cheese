@@ -1,0 +1,21 @@
+{
+  "values": [
+    {
+      "id": "cgt_mod:skeleton_arm",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:skeleton_leg",
+      "required": false
+    },
+    {
+      "id": "cgt_mod:skeleton_torso",
+      "required": false
+    },
+
+    {
+      "id": "minecraft:skeleton_skull",
+      "required": false
+    }
+  ]
+}
