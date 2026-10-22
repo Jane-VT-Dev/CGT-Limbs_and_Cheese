@@ -1,6 +1,8 @@
 package com.June.cgt_mod;
 
 import com.June.cgt_mod.config.EffigyConfig;
+import com.June.cgt_mod.config.ConsumableConfig;
+import com.June.cgt_mod.config.JarConfig;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.item.ModItems;
@@ -42,6 +44,8 @@ public class Cgt_mod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EffigyConfig.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, JarConfig.SPEC, "cgt_mod_cheese_limbs-jar.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConsumableConfig.SPEC, "cgt_mod_cheese_limbs-consumables.toml");
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

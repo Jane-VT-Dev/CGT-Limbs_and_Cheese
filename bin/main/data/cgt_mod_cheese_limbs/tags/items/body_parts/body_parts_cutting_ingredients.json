@@ -26,18 +26,6 @@
     },
 
     {
-      "id": "cgt_mod_cheese_limbs:villager_torso",
-      "required": false
-    },
-    {
-      "id": "cgt_mod_cheese_limbs:pillager_torso",
-      "required": false
-    },
-    {
-      "id": "cgt_mod_cheese_limbs:player_torso",
-      "required": false
-    },
-    {
       "id": "cgt_mod_cheese_limbs:villager_head",
       "required": false
     },

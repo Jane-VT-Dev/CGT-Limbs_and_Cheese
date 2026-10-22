@@ -1,5 +1,6 @@
 package com.June.cgt_mod.block.entity;
 
+import com.June.cgt_mod.config.JarConfig;
 import com.June.cgt_mod.menu.JarMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -15,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class JarBlockEntity extends BlockEntity implements Container, MenuProvider {
     private final NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
@@ -64,12 +66,19 @@ public class JarBlockEntity extends BlockEntity implements Container, MenuProvid
 
     @Override
     public void setItem(int slot, ItemStack stack) {
+        if (!stack.isEmpty() && !allowsItem(stack)) {
+            return;
+        }
         ItemStack stored = stack.copy();
         if (!stored.isEmpty()) {
             stored.setCount(Math.min(stored.getCount(), Math.min(getMaxStackSize(), stored.getMaxStackSize())));
         }
         items.set(slot, stored);
         setChanged();
+    }
+
+    public static boolean allowsItem(ItemStack stack) {
+        return JarConfig.allowsItem(ForgeRegistries.ITEMS.getKey(stack.getItem()).toString());
     }
 
     @Override

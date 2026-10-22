@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "cgt_mod_cheese_limbs:villager_torso"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "axe_strip"
+  },
+  "result": [
+    {
+      "item": "minecraft:bone",
+      "count": 1
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:guts",
+      "count": 1
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:human_flesh",
+      "count": 1
+    }
+  ],
+  "sound": "minecraft:item.axe.strip"
+}

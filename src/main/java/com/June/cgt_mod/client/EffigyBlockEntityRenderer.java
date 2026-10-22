@@ -2,6 +2,7 @@ package com.June.cgt_mod.client;
 
 import com.June.cgt_mod.block.custom.EffigyEmptyBlock;
 import com.June.cgt_mod.block.entity.EffigyBlockEntity;
+import com.June.cgt_mod.config.EffigyConfig;
 import com.June.cgt_mod.item.ModItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
@@ -11,6 +12,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 
@@ -43,9 +45,8 @@ public class EffigyBlockEntityRenderer implements BlockEntityRenderer<EffigyBloc
 			poseStack.translate(0.5 + right.getStepX() * side + facing.getStepX() * forward,
 					offsets[slot][1], 0.5 + right.getStepZ() * side + facing.getStepZ() * forward);
 			poseStack.mulPose(Vector3f.YP.rotationDegrees(facing.toYRot()));
-			if (stack.is(ModItems.PILLAGER_HEAD.get()) || stack.is(ModItems.VILLAGER_HEAD.get())) {
-				poseStack.mulPose(Vector3f.YP.rotationDegrees(180.0F));
-			}
+			String itemId = ForgeRegistries.ITEMS.getKey(stack.getItem()).toString();
+			poseStack.mulPose(Vector3f.YP.rotationDegrees(EffigyConfig.getHeadRotation(itemId)));
 			poseStack.scale(0.8F, 0.8F, 0.8F);
 			Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemTransforms.TransformType.FIXED,
 					packedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, 0);

@@ -1,12 +1,12 @@
 package com.June.cgt_mod.item;
 
 import com.June.cgt_mod.Cgt_mod;
+import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.ModCreativeTab;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -32,9 +32,9 @@ public class ModItems {
     public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(4)
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6000, 0), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 3000, 3), 0.3F)
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 600, 9), 0.5F)
+                    .effect(ConsumableConfig.effect("human_flesh", "damage_boost", MobEffects.DAMAGE_BOOST), 1F)
+                    .effect(ConsumableConfig.effect("human_flesh", "poison", MobEffects.POISON), 0.3F)
+                    .effect(ConsumableConfig.effect("human_flesh", "confusion", MobEffects.CONFUSION), 0.5F)
                     .alwaysEat()
                     .build())
             .tab(ModCreativeTab.instance)
@@ -43,9 +43,9 @@ public class ModItems {
     public static final RegistryObject<Item> GUTS = ITEMS.register("guts",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(6)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 3000, 3), 0.3F)
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 3000, 9), 0.9F)
+                    .effect(ConsumableConfig.effect("guts", "movement_speed", MobEffects.MOVEMENT_SPEED), 1F)
+                    .effect(ConsumableConfig.effect("guts", "poison", MobEffects.POISON), 0.3F)
+                    .effect(ConsumableConfig.effect("guts", "confusion", MobEffects.CONFUSION), 0.9F)
                     .alwaysEat()
                     .build())
             .tab(ModCreativeTab.instance)
@@ -303,7 +303,7 @@ public class ModItems {
     public static final RegistryObject<Item> EPOISSES = ITEMS.register("epoisses",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(6)
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 0), 1F)
+                    .effect(ConsumableConfig.effect("epoisses", "damage_resistance", MobEffects.DAMAGE_RESISTANCE), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -311,7 +311,7 @@ public class ModItems {
     public static final RegistryObject<Item> TOMME_DU_JURA = ITEMS.register("tomme_du_jura",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(6)
-                    .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0), 1F)
+                    .effect(ConsumableConfig.effect("tomme_du_jura", "fire_resistance", MobEffects.FIRE_RESISTANCE), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -326,7 +326,7 @@ public class ModItems {
     public static final RegistryObject<Item> MORBIER = ITEMS.register("morbier",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(6)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 0), 1F)
+                    .effect(ConsumableConfig.effect("morbier", "movement_speed", MobEffects.MOVEMENT_SPEED), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -334,7 +334,7 @@ public class ModItems {
     public static final RegistryObject<Item> RACLETTE = ITEMS.register("raclette",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(5)
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1000, 0), 0.8F)
+                    .effect(ConsumableConfig.effect("raclette", "damage_boost", MobEffects.DAMAGE_BOOST), 0.8F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -342,8 +342,8 @@ public class ModItems {
     public static final RegistryObject<Item> BRIA_SAVARIN = ITEMS.register("bria_savarin",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(6)
-                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 3000, 0), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, 3000, 0), 0.1F)
+                    .effect(ConsumableConfig.effect("bria_savarin", "slow_falling_1", MobEffects.SLOW_FALLING), 1F)
+                    .effect(ConsumableConfig.effect("bria_savarin", "slow_falling_2", MobEffects.SLOW_FALLING), 0.1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -351,7 +351,7 @@ public class ModItems {
     public static final RegistryObject<Item> CASU_MARZU = ITEMS.register("casu_marzu",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                     .nutrition(1)
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200, 5), 0.7F)
+                    .effect(ConsumableConfig.effect("casu_marzu", "confusion", MobEffects.CONFUSION), 0.7F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -367,7 +367,7 @@ public class ModItems {
             .food(new FoodProperties.Builder()
                     .nutrition(16)
                     .alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3000, 1), 1F)
+                    .effect(ConsumableConfig.effect("raclette_plate", "damage_boost", MobEffects.DAMAGE_BOOST), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -417,8 +417,8 @@ public class ModItems {
             .food(new FoodProperties.Builder()
                     .nutrition(2)
                     .alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 400, 10), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .effect(ConsumableConfig.effect("highshroom", "confusion", MobEffects.CONFUSION), 1F)
+                    .effect(ConsumableConfig.effect("highshroom", "hunger", MobEffects.HUNGER), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -427,9 +427,9 @@ public class ModItems {
             .food(new FoodProperties.Builder()
                     .nutrition(2)
                     .alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 400, 10), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 5), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .effect(ConsumableConfig.effect("ieiunium_highshroom", "confusion", MobEffects.CONFUSION), 1F)
+                    .effect(ConsumableConfig.effect("ieiunium_highshroom", "movement_speed", MobEffects.MOVEMENT_SPEED), 1F)
+                    .effect(ConsumableConfig.effect("ieiunium_highshroom", "hunger", MobEffects.HUNGER), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -438,10 +438,10 @@ public class ModItems {
             .food(new FoodProperties.Builder()
                     .nutrition(2)
                     .alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 1000, 10), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3000, 1), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 1), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .effect(ConsumableConfig.effect("fortis_highshroom", "confusion", MobEffects.CONFUSION), 1F)
+                    .effect(ConsumableConfig.effect("fortis_highshroom", "movement_slowdown", MobEffects.MOVEMENT_SLOWDOWN), 1F)
+                    .effect(ConsumableConfig.effect("fortis_highshroom", "damage_resistance", MobEffects.DAMAGE_RESISTANCE), 1F)
+                    .effect(ConsumableConfig.effect("fortis_highshroom", "hunger", MobEffects.HUNGER), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));
@@ -449,10 +449,10 @@ public class ModItems {
             .food(new FoodProperties.Builder()
                     .nutrition(2)
                     .alwaysEat()
-                    .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 1000, 1), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 1000, 10), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3000, 1), 1F)
-                    .effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400, 5), 1F)
+                    .effect(ConsumableConfig.effect("glowius_highshroom", "glowing", MobEffects.GLOWING), 1F)
+                    .effect(ConsumableConfig.effect("glowius_highshroom", "confusion", MobEffects.CONFUSION), 1F)
+                    .effect(ConsumableConfig.effect("glowius_highshroom", "movement_slowdown", MobEffects.MOVEMENT_SLOWDOWN), 1F)
+                    .effect(ConsumableConfig.effect("glowius_highshroom", "hunger", MobEffects.HUNGER), 1F)
                     .build())
             .tab(ModCreativeTab.instance)
     ));

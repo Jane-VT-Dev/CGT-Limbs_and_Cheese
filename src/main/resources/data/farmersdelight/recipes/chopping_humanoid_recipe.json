@@ -21,6 +21,10 @@
     {
       "item": "cgt_mod_cheese_limbs:human_leather",
       "count": 1
+    },
+    {
+      "item": "cgt_mod_cheese_limbs:human_leather",
+      "count": 1
     }
   ],
   "sound": "minecraft:item.axe.strip"
