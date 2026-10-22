@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cgt_mod_cheese_limbs:items/blood_blob"
+  }
+}

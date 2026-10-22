@@ -5,6 +5,7 @@ import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.config.JarConfig;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
+import com.June.cgt_mod.fluid.ModFluids;
 import com.June.cgt_mod.item.ModItems;
 import com.June.cgt_mod.menu.ModMenus;
 import com.mojang.logging.LogUtils;
@@ -15,6 +16,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LayeredCauldronBlock;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -51,6 +57,7 @@ public class Cgt_mod {
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so items get registered
+        ModFluids.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
@@ -99,6 +106,68 @@ public class Cgt_mod {
         if (!event.getLevel().isClientSide) {
             event.getEntity().setItemInHand(event.getHand(),
                     ItemUtils.createFilledResult(heldItem, event.getEntity(), milk));
+        }
+    }
+
+    @SubscribeEvent
+    public void onBloodBottleInteract(PlayerInteractEvent.RightClickBlock event) {
+        ItemStack heldItem = event.getItemStack();
+        var clickedState = event.getLevel().getBlockState(event.getPos());
+        boolean emptyCauldron = clickedState.is(Blocks.CAULDRON);
+        boolean isBloodCauldron = clickedState.is(ModFluids.BLOOD_CAULDRON.get());
+        if (heldItem.is(ModItems.BLOOD_BLOB.get()) && (emptyCauldron || isBloodCauldron)) {
+            int currentLevel = isBloodCauldron ? clickedState.getValue(LayeredCauldronBlock.LEVEL) : 0;
+            if (currentLevel < 3) {
+                event.setCanceled(true);
+                event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+                if (!event.getLevel().isClientSide) {
+                    var filledState = ModFluids.BLOOD_CAULDRON.get().defaultBlockState()
+                            .setValue(LayeredCauldronBlock.LEVEL, currentLevel + 1);
+                    event.getLevel().setBlockAndUpdate(event.getPos(), filledState);
+                    if (!event.getEntity().getAbilities().instabuild) {
+                        heldItem.shrink(1);
+                    }
+                    event.getEntity().awardStat(net.minecraft.stats.Stats.FILL_CAULDRON);
+                    event.getLevel().playSound(null, event.getPos(), SoundEvents.BOTTLE_EMPTY,
+                            SoundSource.BLOCKS, 1.0F, 1.0F);
+                    event.getLevel().gameEvent(GameEvent.FLUID_PLACE, event.getPos(),
+                            GameEvent.Context.of(event.getEntity()));
+                }
+                return;
+            }
+        }
+
+        if (heldItem.is(Items.GLASS_BOTTLE)
+                && event.getLevel().getFluidState(event.getPos()).isSource()
+                && event.getLevel().getFluidState(event.getPos()).getType() == ModFluids.BLOOD.get()) {
+            event.setCanceled(true);
+            event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+            if (!event.getLevel().isClientSide) {
+                event.getEntity().setItemInHand(event.getHand(),
+                        ItemUtils.createFilledResult(heldItem, event.getEntity(),
+                                new ItemStack(ModItems.BLOOD_BOTTLE.get())));
+                event.getLevel().playSound(null, event.getPos(), SoundEvents.BOTTLE_FILL,
+                        SoundSource.BLOCKS, 1.0F, 1.0F);
+            }
+            return;
+        }
+
+        if (!heldItem.is(ModItems.BLOOD_BUCKET.get())
+                || !event.getLevel().getBlockState(event.getPos()).is(Blocks.CAULDRON)) {
+            return;
+        }
+
+        event.setCanceled(true);
+        event.setCancellationResult(InteractionResult.sidedSuccess(event.getLevel().isClientSide));
+        if (!event.getLevel().isClientSide) {
+            var bloodCauldron = ModFluids.BLOOD_CAULDRON.get().defaultBlockState()
+                    .setValue(LayeredCauldronBlock.LEVEL, 3);
+            event.getLevel().setBlockAndUpdate(event.getPos(), bloodCauldron);
+            event.getEntity().setItemInHand(event.getHand(),
+                    ItemUtils.createFilledResult(heldItem, event.getEntity(), new ItemStack(Items.BUCKET)));
+            event.getEntity().awardStat(net.minecraft.stats.Stats.FILL_CAULDRON);
+            event.getLevel().playSound(null, event.getPos(), SoundEvents.BUCKET_EMPTY,
+                    SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }
 

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "cgt_mod_cheese_limbs:items/butcher_knife"
+  }
+}

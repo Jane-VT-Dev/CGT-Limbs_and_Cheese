@@ -3,6 +3,7 @@ package com.June.cgt_mod.item;
 import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.ModCreativeTab;
+import com.June.cgt_mod.fluid.ModFluids;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
@@ -10,7 +11,14 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,6 +36,41 @@ public class ModItems {
     public static final RegistryObject<Item> LITTLE_STONE = ITEMS.register("little_stone",() -> new Item(new Item.Properties()
             .tab(ModCreativeTab.instance)
     ));
+
+    public static final RegistryObject<Item> BUTCHER_KNIFE = ITEMS.register("butcher_knife",() -> new SwordItem(Tiers.IRON, 2, -2.4F, new Item.Properties()
+            .stacksTo(1)
+            .tab(ModCreativeTab.instance)
+    ) {
+        @Override
+        public boolean isDamageable(ItemStack stack) {
+            return false;
+        }
+
+        @Override
+        public boolean isEnchantable(ItemStack stack) {
+            return true;
+        }
+
+        @Override
+        public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
+            return toolAction == ToolActions.AXE_STRIP || super.canPerformAction(stack, toolAction);
+        }
+    });
+
+    public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
+            () -> new BucketItem(() -> ModFluids.BLOOD.get(), new Item.Properties()
+                    .craftRemainder(Items.BUCKET)
+                    .stacksTo(1)
+                    .tab(ModCreativeTab.instance)));
+
+    public static final RegistryObject<Item> BLOOD_BOTTLE = ITEMS.register("blood_bottle",
+            () -> new Item(new Item.Properties()
+                    .stacksTo(1)
+                    .tab(ModCreativeTab.instance)));
+
+    public static final RegistryObject<Item> BLOOD_BLOB = ITEMS.register("blood_blob",
+            () -> new Item(new Item.Properties()
+                    .tab(ModCreativeTab.instance)));
 
     public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()

@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Minecraft Client (Gradle)",
+			"type": "shell",
+			"command": ".\\gradlew.bat",
+			"args": [
+				"runClient"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
