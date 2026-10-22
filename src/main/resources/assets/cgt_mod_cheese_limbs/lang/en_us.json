@@ -13,6 +13,8 @@
   "item.cgt_mod_cheese_limbs.blood_blob": "Blood Blob",
   "fluid_type.cgt_mod_cheese_limbs.blood": "Blood",
   "block.cgt_mod_cheese_limbs.blood_cauldron": "Blood Cauldron",
+  "block.cgt_mod_cheese_limbs.blood_altar": "Blood Altar",
+  "block.cgt_mod_cheese_limbs.pedestal": "Pedestal",
 
   "item.cgt_mod_cheese_limbs.pillager_head_on_stick": "Pillager Head on a Stick",
   "item.cgt_mod_cheese_limbs.player_head_on_stick": "Player Head on a Stick",
@@ -68,6 +70,7 @@
   "block.cgt_mod_cheese_limbs.effigy_empty_block": "Effigy",
   "block.cgt_mod_cheese_limbs.blood_blob": "Blood Blob",
   "container.cgt_mod.effigy": "Effigy",
+  "container.cgt_mod.blood_altar": "Blood Altar",
 
   "block.cgt_mod_cheese_limbs.jar": "Jar",
   "container.cgt_mod.jar": "Jar",

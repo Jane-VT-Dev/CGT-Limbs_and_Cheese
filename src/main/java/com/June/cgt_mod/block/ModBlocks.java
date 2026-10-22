@@ -4,7 +4,9 @@ import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.ModCreativeTab;
 import com.June.cgt_mod.block.custom.EffigyEmptyBlock;
 import com.June.cgt_mod.block.custom.BloodBlobBlock;
+import com.June.cgt_mod.block.custom.BloodAltarBlock;
 import com.June.cgt_mod.block.custom.JarBlock;
+import com.June.cgt_mod.block.custom.PedestalBlock;
 import com.June.cgt_mod.block.custom.PlayerHeadPotBlock;
 import com.June.cgt_mod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -29,6 +31,15 @@ public class ModBlocks {
         public static final RegistryObject<Block> JAR = registerBlock("jar",
                 () -> new JarBlock(BlockBehaviour.Properties.of(Material.GLASS)
                         .strength(0.5f).noOcclusion()));
+
+        public static final RegistryObject<Block> BLOOD_ALTAR = registerBlock("blood_altar",
+                () -> new BloodAltarBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(3.5f).noOcclusion()
+                        .lightLevel(state -> state.getValue(BloodAltarBlock.ACTIVE) ? 4 : 0)));
+
+        public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
+                () -> new PedestalBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(2.0f).noOcclusion()));
 
         public static final RegistryObject<Block> PLAYER_HEAD_POT = registerBlock("player_head_pot",
                 () -> new PlayerHeadPotBlock(BlockBehaviour.Properties.of(Material.STONE)

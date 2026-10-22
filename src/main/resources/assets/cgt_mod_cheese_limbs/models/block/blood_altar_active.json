@@ -1,0 +1,6 @@
+{
+  "parent": "cgt_mod_cheese_limbs:block/blood_altar",
+  "textures": {
+    "blood": "cgt_mod_cheese_limbs:blocks/blood_altar_blood_active"
+  }
+}

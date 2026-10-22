@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "cgt_mod_cheese_limbs:block/blood_altar"
+    },
+    "active=true": {
+      "model": "cgt_mod_cheese_limbs:block/blood_altar_active"
+    }
+  }
+}

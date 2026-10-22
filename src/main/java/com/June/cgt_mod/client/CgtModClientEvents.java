@@ -35,6 +35,7 @@ public class CgtModClientEvents {
         event.enqueueWork(() -> {
             MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new);
             MenuScreens.register(ModMenus.JAR_MENU.get(), JarScreen::new);
+            MenuScreens.register(ModMenus.BLOOD_ALTAR_MENU.get(), BloodAltarScreen::new);
            ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
            ItemBlockRenderTypes.setRenderLayer(ModFluids.BLOOD_BLOCK.get(), RenderType.translucent());
            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_BLOB.get(), RenderType.cutout());
@@ -46,5 +47,7 @@ public class CgtModClientEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.EFFIGY_EMPTY.get(), EffigyBlockEntityRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.PLAYER_HEAD_POT.get(), PlayerHeadPotRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.JAR.get(), JarBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.BLOOD_ALTAR.get(), BloodAltarBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL.get(), PedestalBlockEntityRenderer::new);
     }
 }

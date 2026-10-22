@@ -27,6 +27,14 @@ public class ModBlockEntities {
 	public static final RegistryObject<BlockEntityType<JarBlockEntity>> JAR = BLOCK_ENTITIES.register(
 			"jar", () -> BlockEntityType.Builder.of(JarBlockEntity::new, ModBlocks.JAR.get()).build(null));
 
+	public static final RegistryObject<BlockEntityType<BloodAltarBlockEntity>> BLOOD_ALTAR = BLOCK_ENTITIES.register(
+			"blood_altar", () -> BlockEntityType.Builder.of(BloodAltarBlockEntity::new,
+					ModBlocks.BLOOD_ALTAR.get()).build(null));
+
+	public static final RegistryObject<BlockEntityType<PedestalBlockEntity>> PEDESTAL = BLOCK_ENTITIES.register(
+			"pedestal", () -> BlockEntityType.Builder.of(PedestalBlockEntity::new,
+					ModBlocks.PEDESTAL.get()).build(null));
+
 	public static void register(IEventBus eventBus) {
 		BLOCK_ENTITIES.register(eventBus);
 	}

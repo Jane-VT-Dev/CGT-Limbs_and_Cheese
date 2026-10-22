@@ -14,6 +14,8 @@ public class ModMenus {
 			"effigy", () -> IForgeMenuType.create(EffigyMenu::new));
 	public static final RegistryObject<MenuType<JarMenu>> JAR_MENU = MENUS.register(
 			"jar", () -> IForgeMenuType.create(JarMenu::new));
+	public static final RegistryObject<MenuType<BloodAltarMenu>> BLOOD_ALTAR_MENU = MENUS.register(
+			"blood_altar", () -> IForgeMenuType.create(BloodAltarMenu::new));
 
 	public static void register(IEventBus eventBus) {
 		MENUS.register(eventBus);

@@ -9,6 +9,7 @@ import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.fluid.ModFluids;
 import com.June.cgt_mod.item.ModItems;
 import com.June.cgt_mod.menu.ModMenus;
+import com.June.cgt_mod.recipe.BloodAltarRecipe;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.animal.Sheep;
@@ -65,6 +66,7 @@ public class Cgt_mod {
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenus.register(modEventBus);
+        BloodAltarRecipe.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

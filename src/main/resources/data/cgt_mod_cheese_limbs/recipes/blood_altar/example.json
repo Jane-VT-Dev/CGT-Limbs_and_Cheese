@@ -1,0 +1,25 @@
+{
+  "type": "cgt_mod_cheese_limbs:blood_altar",
+  "core": {
+    "item": "minecraft:diamond"
+  },
+  "pedestals": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "blood": 5000,
+  "duration": 200,
+  "result": {
+    "item": "minecraft:nether_star"
+  }
+}
