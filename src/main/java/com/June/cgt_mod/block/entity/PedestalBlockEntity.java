@@ -128,6 +128,9 @@ public class PedestalBlockEntity extends BlockEntity implements Container {
     @Override
     public void load(CompoundTag tag) {
         super.load(tag);
+        for (int slot = 0; slot < items.size(); slot++) {
+            items.set(slot, ItemStack.EMPTY);
+        }
         ContainerHelper.loadAllItems(tag, items);
     }
 
