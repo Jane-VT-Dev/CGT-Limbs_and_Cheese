@@ -1,0 +1,18 @@
+{
+  "textures": {
+    "blob": "cgt_mod_cheese_limbs:items/blood_blob",
+    "particle": "cgt_mod_cheese_limbs:blocks/blood_blob"
+  },
+  "elements": [
+    {
+      "from": [0, 0.1, 0],
+      "to": [16, 0.2, 16],
+      "faces": {
+        "up": {
+          "texture": "#blob",
+          "uv": [0, 0, 16, 16]
+        }
+      }
+    }
+  ]
+}

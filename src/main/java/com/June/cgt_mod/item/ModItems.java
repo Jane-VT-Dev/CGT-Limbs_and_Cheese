@@ -3,6 +3,7 @@ package com.June.cgt_mod.item;
 import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.ModCreativeTab;
+import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.fluid.ModFluids;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Items;
@@ -69,7 +71,7 @@ public class ModItems {
                     .tab(ModCreativeTab.instance)));
 
     public static final RegistryObject<Item> BLOOD_BLOB = ITEMS.register("blood_blob",
-            () -> new Item(new Item.Properties()
+            () -> new BlockItem(ModBlocks.BLOOD_BLOB.get(), new Item.Properties()
                     .tab(ModCreativeTab.instance)));
 
     public static final RegistryObject<Item> HUMAN_FLESH = ITEMS.register("human_flesh",() -> new Item(new Item.Properties()

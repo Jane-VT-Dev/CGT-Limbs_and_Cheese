@@ -3,6 +3,7 @@ package com.June.cgt_mod.block;
 import com.June.cgt_mod.Cgt_mod;
 import com.June.cgt_mod.ModCreativeTab;
 import com.June.cgt_mod.block.custom.EffigyEmptyBlock;
+import com.June.cgt_mod.block.custom.BloodBlobBlock;
 import com.June.cgt_mod.block.custom.JarBlock;
 import com.June.cgt_mod.block.custom.PlayerHeadPotBlock;
 import com.June.cgt_mod.item.ModItems;
@@ -32,6 +33,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> PLAYER_HEAD_POT = registerBlock("player_head_pot",
                 () -> new PlayerHeadPotBlock(BlockBehaviour.Properties.of(Material.STONE)
                         .strength(1.5f).noOcclusion()));
+
+        public static final RegistryObject<Block> BLOOD_BLOB = BLOCKS.register("blood_blob",
+                () -> new BloodBlobBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                        .noCollission().noOcclusion().instabreak()));
 
         public static final RegistryObject<Block> PILLAGER_HEAD_POT = registerBlock("pillager_head_pot",
                 () -> new PlayerHeadPotBlock(BlockBehaviour.Properties.of(Material.STONE)

@@ -37,6 +37,7 @@ public class CgtModClientEvents {
             MenuScreens.register(ModMenus.JAR_MENU.get(), JarScreen::new);
            ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
            ItemBlockRenderTypes.setRenderLayer(ModFluids.BLOOD_BLOCK.get(), RenderType.translucent());
+           ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_BLOB.get(), RenderType.cutout());
         });
     }
 

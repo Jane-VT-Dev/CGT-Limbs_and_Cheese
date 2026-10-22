@@ -115,7 +115,9 @@ public class Cgt_mod {
         var clickedState = event.getLevel().getBlockState(event.getPos());
         boolean emptyCauldron = clickedState.is(Blocks.CAULDRON);
         boolean isBloodCauldron = clickedState.is(ModFluids.BLOOD_CAULDRON.get());
-        if (heldItem.is(ModItems.BLOOD_BLOB.get()) && (emptyCauldron || isBloodCauldron)) {
+        boolean isBloodBlob = heldItem.is(ModItems.BLOOD_BLOB.get());
+        boolean isBloodBottle = heldItem.is(ModItems.BLOOD_BOTTLE.get());
+        if ((isBloodBlob || isBloodBottle) && (emptyCauldron || isBloodCauldron)) {
             int currentLevel = isBloodCauldron ? clickedState.getValue(LayeredCauldronBlock.LEVEL) : 0;
             if (currentLevel < 3) {
                 event.setCanceled(true);
@@ -124,8 +126,12 @@ public class Cgt_mod {
                     var filledState = ModFluids.BLOOD_CAULDRON.get().defaultBlockState()
                             .setValue(LayeredCauldronBlock.LEVEL, currentLevel + 1);
                     event.getLevel().setBlockAndUpdate(event.getPos(), filledState);
-                    if (!event.getEntity().getAbilities().instabuild) {
+                    if (isBloodBlob && !event.getEntity().getAbilities().instabuild) {
                         heldItem.shrink(1);
+                    } else if (isBloodBottle) {
+                        event.getEntity().setItemInHand(event.getHand(),
+                                ItemUtils.createFilledResult(heldItem, event.getEntity(),
+                                        new ItemStack(Items.GLASS_BOTTLE)));
                     }
                     event.getEntity().awardStat(net.minecraft.stats.Stats.FILL_CAULDRON);
                     event.getLevel().playSound(null, event.getPos(), SoundEvents.BOTTLE_EMPTY,
