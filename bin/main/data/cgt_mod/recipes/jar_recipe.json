@@ -10,11 +10,11 @@
       "item": "minecraft:glass_pane"
     },
     "2": {
-      "item": "minecraft:smooth_sandstone_slab"
+      "item": "minecraft:smooth_stone_slab"
     }
   },
   "result": {
-    "item": "cgt_mod:jar_block",
+    "item": "cgt_mod:jar",
     "count": 1
   }
 }

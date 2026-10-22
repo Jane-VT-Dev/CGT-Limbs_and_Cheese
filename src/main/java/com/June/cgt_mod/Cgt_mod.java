@@ -28,7 +28,7 @@ import org.slf4j.Logger;
 public class Cgt_mod {
 
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "cgt_mod";
+    public static final String MOD_ID = "cgt_mod-cheese_limbs";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 

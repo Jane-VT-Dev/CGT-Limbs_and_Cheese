@@ -20,7 +20,7 @@ public class CgtModClientEvents {
         event.enqueueWork(() -> {
             MenuScreens.register(ModMenus.EFFIGY_MENU.get(), EffigyScreen::new);
             MenuScreens.register(ModMenus.JAR_MENU.get(), JarScreen::new);
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
+           ItemBlockRenderTypes.setRenderLayer(ModBlocks.JAR.get(), RenderType.translucent());
         });
     }
 
