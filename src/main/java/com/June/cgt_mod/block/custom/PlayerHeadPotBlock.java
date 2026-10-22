@@ -1,6 +1,7 @@
 package com.June.cgt_mod.block.custom;
 
 import com.June.cgt_mod.block.entity.PlayerHeadPotBlockEntity;
+import com.June.cgt_mod.config.HeadPlantPotConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -88,7 +89,7 @@ public class PlayerHeadPotBlock extends Block implements EntityBlock {
             ResourceLocation plantId = ForgeRegistries.BLOCKS.getKey(blockItem.getBlock());
             if (plantId != null) {
                 var pottedPlant = flowerPot.getFullPotsView().get(plantId);
-                if (pottedPlant != null) {
+                if (HeadPlantPotConfig.allowsPlant(plantId.toString(), pottedPlant != null)) {
                     if (!level.isClientSide) {
                         pot.setPlant(heldStack);
                         if (!player.getAbilities().instabuild) {

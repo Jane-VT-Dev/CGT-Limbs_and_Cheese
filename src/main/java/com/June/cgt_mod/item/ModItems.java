@@ -16,6 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
@@ -417,7 +418,8 @@ public class ModItems {
             .tab(ModCreativeTab.instance)
     ));
 
-    public static final RegistryObject<Item> SHEEP_MILK_BUCKET = ITEMS.register("sheep_milk_bucket",() -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> SHEEP_MILK_BUCKET = ITEMS.register("sheep_milk_bucket",() -> new MilkBucketItem(new Item.Properties()
+            .craftRemainder(Items.BUCKET)
             .stacksTo(1)
             .tab(ModCreativeTab.instance)
     ));
