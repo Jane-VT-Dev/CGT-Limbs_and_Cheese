@@ -9,7 +9,6 @@
     "1": {
       "item": "minecraft:stick"
     },
-  "key": {
     "2": {
       "item": "cgt_mod_cheese_limbs:human_leather"
     }
@@ -19,4 +18,3 @@
     "count": 1
   }
   }
-}
