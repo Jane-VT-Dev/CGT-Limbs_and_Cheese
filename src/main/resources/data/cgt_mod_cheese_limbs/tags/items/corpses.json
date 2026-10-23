@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "cgt_mod_cheese_limbs:player_corpse",
+    "cgt_mod_cheese_limbs:pillager_corpse",
+    "cgt_mod_cheese_limbs:villager_corpse",
+    "cgt_mod_cheese_limbs:zombie_corpse"
+  ]
+}

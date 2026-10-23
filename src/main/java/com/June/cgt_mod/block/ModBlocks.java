@@ -6,6 +6,7 @@ import com.June.cgt_mod.block.custom.EffigyEmptyBlock;
 import com.June.cgt_mod.block.custom.BloodBlobBlock;
 import com.June.cgt_mod.block.custom.BloodAltarBlock;
 import com.June.cgt_mod.block.custom.JarBlock;
+import com.June.cgt_mod.block.custom.MeatGrinderBlock;
 import com.June.cgt_mod.block.custom.PedestalBlock;
 import com.June.cgt_mod.block.custom.PlayerHeadPotBlock;
 import com.June.cgt_mod.item.ModItems;
@@ -40,6 +41,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal",
                 () -> new PedestalBlock(BlockBehaviour.Properties.of(Material.STONE)
                         .strength(2.0f).noOcclusion()));
+
+        public static final RegistryObject<Block> MEAT_GRINDER = registerBlock("meat_grinder",
+                () -> new MeatGrinderBlock(BlockBehaviour.Properties.of(Material.STONE)
+                        .strength(3.5f).requiresCorrectToolForDrops().noOcclusion()));
 
         public static final RegistryObject<Block> PLAYER_HEAD_POT = registerBlock("player_head_pot",
                 () -> new PlayerHeadPotBlock(BlockBehaviour.Properties.of(Material.STONE)

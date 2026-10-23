@@ -35,6 +35,10 @@ public class ModBlockEntities {
 			"pedestal", () -> BlockEntityType.Builder.of(PedestalBlockEntity::new,
 					ModBlocks.PEDESTAL.get()).build(null));
 
+	public static final RegistryObject<BlockEntityType<MeatGrinderBlockEntity>> MEAT_GRINDER = BLOCK_ENTITIES.register(
+			"meat_grinder", () -> BlockEntityType.Builder.of(MeatGrinderBlockEntity::new,
+					ModBlocks.MEAT_GRINDER.get()).build(null));
+
 	public static void register(IEventBus eventBus) {
 		BLOCK_ENTITIES.register(eventBus);
 	}

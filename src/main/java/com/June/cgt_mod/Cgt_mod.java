@@ -5,12 +5,14 @@ import com.June.cgt_mod.config.ConsumableConfig;
 import com.June.cgt_mod.config.JarConfig;
 import com.June.cgt_mod.config.HeadPlantPotConfig;
 import com.June.cgt_mod.config.BloodAltarConfig;
+import com.June.cgt_mod.config.MeatGrinderConfig;
 import com.June.cgt_mod.block.ModBlocks;
 import com.June.cgt_mod.block.entity.ModBlockEntities;
 import com.June.cgt_mod.fluid.ModFluids;
 import com.June.cgt_mod.item.ModItems;
 import com.June.cgt_mod.menu.ModMenus;
 import com.June.cgt_mod.recipe.BloodAltarRecipe;
+import com.June.cgt_mod.recipe.MeatGrinderRecipe;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.animal.Sheep;
@@ -59,6 +61,8 @@ public class Cgt_mod {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConsumableConfig.SPEC, "cgt_mod_cheese_limbs-consumables.toml");
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, BloodAltarConfig.SPEC,
                 "cgt_mod_cheese_limbs-blood-altar.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MeatGrinderConfig.SPEC,
+                "cgt_mod_cheese_limbs-meat-grinder.toml");
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -70,6 +74,7 @@ public class Cgt_mod {
         ModBlockEntities.register(modEventBus);
         ModMenus.register(modEventBus);
         BloodAltarRecipe.register(modEventBus);
+        MeatGrinderRecipe.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

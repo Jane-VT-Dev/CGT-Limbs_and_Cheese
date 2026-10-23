@@ -1,0 +1,25 @@
+{
+  "type": "cgt_mod_cheese_limbs:blood_altar",
+  "core": {
+    "item": "minecraft:anvil"
+  },
+  "pedestals": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "blood": 1000,
+  "duration": 500,
+  "result": {
+    "item": "cgt_mod_cheese_limbs:meat_grinder"
+  }
+}

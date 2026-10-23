@@ -1,0 +1,7 @@
+{
+  "type": "cgt_mod_cheese_limbs:meat_grinder",
+  "input": {
+    "tag": "cgt_mod_cheese_limbs:corpses"
+  },
+  "blood": 1000
+}
