@@ -8,11 +8,15 @@
   "item.cgt_mod_cheese_limbs.little_rock": "Little Rock",
   "item.cgt_mod_cheese_limbs.stick_bundle": "Stick Bundle",
   "item.cgt_mod_cheese_limbs.butcher_knife": "Butcher Knife",
+  "item.cgt_mod_cheese_limbs.scythe": "Scythe",
   "item.cgt_mod_cheese_limbs.blood_bucket": "Blood Bucket",
   "item.cgt_mod_cheese_limbs.blood_bottle": "Blood Bottle",
   "item.cgt_mod_cheese_limbs.blood_blob": "Blood Blob",
   "fluid_type.cgt_mod_cheese_limbs.blood": "Blood",
   "block.cgt_mod_cheese_limbs.blood_cauldron": "Blood Cauldron",
+  "block.cgt_mod_cheese_limbs.blood_altar": "Blood Altar",
+  "block.cgt_mod_cheese_limbs.meat_grinder": "Meat Grinder",
+  "block.cgt_mod_cheese_limbs.pedestal": "Pedestal",
 
   "item.cgt_mod_cheese_limbs.pillager_head_on_stick": "Pillager Head on a Stick",
   "item.cgt_mod_cheese_limbs.player_head_on_stick": "Player Head on a Stick",
@@ -66,7 +70,12 @@
   "item.cgt_mod_cheese_limbs.soup_de_cannibal": "Cooked de cannibal",
 
   "block.cgt_mod_cheese_limbs.effigy_empty_block": "Effigy",
+  "block.cgt_mod_cheese_limbs.blood_blob": "Blood Blob",
   "container.cgt_mod.effigy": "Effigy",
+  "container.cgt_mod.blood_altar": "Blood Altar",
+  "recipe.cgt_mod_cheese_limbs.blood_altar.blood": "Blood: %s mB",
+  "recipe.cgt_mod_cheese_limbs.blood_altar.duration": "Duration: %s s",
+  "recipe.cgt_mod_cheese_limbs.meat_grinder.blood": "Blood: %s mB",
 
   "block.cgt_mod_cheese_limbs.jar": "Jar",
   "container.cgt_mod.jar": "Jar",

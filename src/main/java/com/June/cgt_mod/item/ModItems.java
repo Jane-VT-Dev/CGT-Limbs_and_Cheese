@@ -59,6 +59,11 @@ public class ModItems {
         }
     });
 
+    public static final RegistryObject<Item> SCYTHE = ITEMS.register("scythe", () -> new ScytheItem(new Item.Properties()
+            .durability(ScytheItem.DURABILITY)
+            .tab(ModCreativeTab.instance)
+    ));
+
     public static final RegistryObject<Item> BLOOD_BUCKET = ITEMS.register("blood_bucket",
             () -> new BucketItem(() -> ModFluids.BLOOD.get(), new Item.Properties()
                     .craftRemainder(Items.BUCKET)
